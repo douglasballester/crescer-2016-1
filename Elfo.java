@@ -10,29 +10,35 @@ public class Elfo
     // variáveis de instância - substitua o exemplo abaixo pelo seu próprio
     private int experiencia;
     private int flecha = 42;
-   
+    private String nome;
+    private Dwarf dwarf;
 
-    /**
-     * COnstrutor para objetos da classe Elfo
-     */
     public Elfo(){}
-    public Elfo(int experiencia, int flecha)
+    public Elfo(int experiencia, int flecha, String nome)
     {
         // inicializa variáveis de instância
         this.experiencia = experiencia;
         this.flecha = flecha;
+        this.nome = nome;
     }
 
-    /**
-     * Exemplo de método - substitua este comentário pelo seu próprio
-     * 
-     * @param  y   exemplo de um parâmetro de método
-     * @return     a soma de x com y 
-     */
-    public void atirarFlecha()
+    public void atirarFlecha(Dwarf dwarf)
     {
-        // ponha seu código aqui
-        flecha--;
         experiencia++;
-   }
+        flecha--;
+        dwarf.perdeVida();
+    }
+    
+    public int getFlecha(){
+        return flecha;
+    } 
+    
+    public int getExperiencia(){
+        return this.experiencia;
+    }
+    
+    public String toString(){
+        return this.nome+ " possui "+ this.flecha+ " flechas e "+ this.experiencia+ " níveis de experiência";
+    }
+      
 }
