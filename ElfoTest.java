@@ -23,7 +23,7 @@ public class ElfoTest
     
    @Test
     public void elfoPerdeFlecha(){
-        Elfo teste = new Elfo(5, 42);
+        Elfo teste = new Elfo(5, 42, "Legolas");
         Dwarf d1 = new Dwarf();
         teste.atirarFlecha(d1);
         
