@@ -29,6 +29,23 @@ public class DwarfTest
         assertEquals(esperado, obtido);
     }
     
+    @Test
+    public void dwarfNasceVivo(){
+        Dwarf dwarf = new Dwarf("Balin");
+        assertEquals(dwarf.getStatus(), Status.VIVO); 
     
+    
+    }
+    
+    @Test
+    public void dwarfMorreCom0DeVida(){
+        Dwarf dwarf = new Dwarf();
+        
+        dwarf.getVida();
+        for(int i=0; i <= 11; i++){
+            dwarf.perdeVida();
+        }
+        assertEquals(dwarf.getStatus(), Status.MORTO);
+    }
 }
    
