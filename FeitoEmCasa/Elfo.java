@@ -17,7 +17,7 @@ public class Elfo
     public Elfo(int experiencia, int flecha, String nome)
     {
         // inicializa variáveis de instância
-        this.experiencia = experiencia;
+        this.experiencia = experiencia; 
         this.flecha = flecha;
         this.nome = nome;
     }
@@ -36,6 +36,8 @@ public class Elfo
     public int getExperiencia(){
         return this.experiencia;
     }
+    
+    
     
     public String toString(){
         return this.nome+ " possui "+ this.flecha+ " flechas e "+ this.experiencia+ " níveis de experiência";
