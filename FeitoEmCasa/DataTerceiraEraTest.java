@@ -11,18 +11,22 @@ public class DataTerceiraEraTest
     
     @Test
     public void testeAnoBis(){
-        DataTerceiraEra teste = new DataTerceiraEra(02,10,1994);
+        DataTerceiraEra teste = new DataTerceiraEra(02,10,1992);
         
         boolean esperado = true;
         boolean obtido = teste.ehBissexto();
+        
+        assertEquals(esperado, obtido);
     }
     
    @Test
     public void testeAnoNaoBis(){
         DataTerceiraEra teste = new DataTerceiraEra(22,11,1900);
         
-        boolean esperado = true;
+        boolean esperado = false;
         boolean obtido = teste.ehBissexto();
+        
+        assertEquals(esperado,obtido);
     }
 
 }
