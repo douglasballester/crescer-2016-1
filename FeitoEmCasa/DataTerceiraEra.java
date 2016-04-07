@@ -10,6 +10,18 @@ public class DataTerceiraEra{
         this.ano = ano;
     }
     
+    public int getDia(){
+        return dia;
+    }
+    
+    public int getMes(){
+        return mes;
+    }
+    
+    public int getAno(){
+        return ano;
+    }
+    
     
     public boolean ehBissexto(){
         return(ano % 400 == 0 || ano % 4 == 0 && ano % 100 != 0);
