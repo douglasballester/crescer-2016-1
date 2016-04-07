@@ -23,6 +23,9 @@ public class Dwarf{
         return nome;
     }
     
+    public int getVida(){
+        return vida;
+    }
     //Declarar um Objeto:
     //Dwarf gimli = null;
     
