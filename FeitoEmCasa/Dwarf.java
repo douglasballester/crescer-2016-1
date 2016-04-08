@@ -3,7 +3,6 @@ public class Dwarf{
     private String nome;
     private Status status = Status.VIVO;
     
-    public Dwarf(){}
     
     public Dwarf(String nome){
         this.vida = 110;
@@ -22,7 +21,7 @@ public class Dwarf{
     }
     
     public void setNome(String novoNome){
-    nome = novoNome;
+        nome = novoNome;
     }
     
     public String getNome(){

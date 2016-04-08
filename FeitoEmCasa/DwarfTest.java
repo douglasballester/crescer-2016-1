@@ -1,5 +1,3 @@
-
-
 import static org.junit.Assert.*;
 import org.junit.After;
 import org.junit.Before;
@@ -15,7 +13,7 @@ public class DwarfTest
 {
     @Test
     public void criarDwarfComVida(){
-        Dwarf teste = new Dwarf();
+        Dwarf teste = new Dwarf("Thorin");
         int esperado = 110;
         int obtido = teste.getVida();
         assertEquals(esperado, obtido);
@@ -23,7 +21,7 @@ public class DwarfTest
     
     @Test
     public void DwarfPerdeVida(){
-        Dwarf teste = new Dwarf();
+        Dwarf teste = new Dwarf("Thorin");
         int esperado = teste.getVida() - 10;
         int obtido = 100;
         assertEquals(esperado, obtido);
@@ -39,13 +37,40 @@ public class DwarfTest
     
     @Test
     public void dwarfMorreCom0DeVida(){
-        Dwarf dwarf = new Dwarf();
+        Dwarf dwarf = new Dwarf("Thorin");
         
-        dwarf.getVida();
-        for(int i=0; i <= 11; i++){
-            dwarf.perdeVida();
-        }
+        dwarf.perdeVida();
+        dwarf.perdeVida();
+        dwarf.perdeVida();
+        dwarf.perdeVida();
+        dwarf.perdeVida();
+        dwarf.perdeVida();
+        dwarf.perdeVida();
+        dwarf.perdeVida();
+        dwarf.perdeVida();
+        dwarf.perdeVida();
+        dwarf.perdeVida();
+        
         assertEquals(dwarf.getStatus(), Status.MORTO);
+    }
+    
+    @Test
+    public void dwarfPerde120() {
+        Dwarf d1 = new Dwarf("Balin");
+        d1.perdeVida();
+        d1.perdeVida();
+        d1.perdeVida();
+        d1.perdeVida();
+        d1.perdeVida();
+        d1.perdeVida();
+        d1.perdeVida();
+        d1.perdeVida();
+        d1.perdeVida();
+        d1.perdeVida();
+        d1.perdeVida();
+        d1.perdeVida();
+        assertEquals(0, d1.getVida());
+        assertEquals(Status.MORTO, d1.getStatus());
     }
 }
    
