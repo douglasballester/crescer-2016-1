@@ -27,4 +27,9 @@ public class DataTerceiraEra{
         return(ano % 400 == 0 || ano % 4 == 0 && ano % 100 != 0);
 
     }
+    
+    public String toString (){
+       return String.format("%d/%d/%d", dia, mes, ano);     
+       
+    }
 }
