@@ -1,5 +1,5 @@
 public class Dwarf{
-    private int vida = 110;
+    private int experiencia = 0 ,vida = 110;
     private String nome;
     private Status status = Status.VIVO;
     private Inventario bag = new Inventario();
@@ -13,14 +13,24 @@ public class Dwarf{
     
     }
     
+    public Dwarf(String nome, DataTerceiraEra dataNascimento){
+        this(nome);
+        this.dataNascimento = dataNascimento;
+    }
+    
     
     public void perdeVida(){
-    if(vida > 0){
-        vida = vida - 10;
-            if (vida == 0){
-                status = Status.MORTO;
-            }
-    }
+        if(getNumeroSorte() < 0){
+            experiencia += 2;
+        }
+        else if(getNumeroSorte() < 0 && getNumeroSorte() > 100){
+            if(vida > 0){
+                vida = vida - 10;
+                if (vida == 0){
+                    status = Status.MORTO;
+                }         
+            }    
+        }
     }
     
     public void setNome(String novoNome){
@@ -39,12 +49,31 @@ public class Dwarf{
         return status;
     }
     
+    public DataTerceiraEra getDataNascimento(){
+        return dataNascimento;
+    }
+    
+    public Inventario getInventario(){
+        return bag;
+    }
+    
     public void adicionarItem(Item itens){
         bag.adicionarItem(itens);
     }
     
     public void perderItem(Item itens){
         bag.removerItem(itens);
+    }
+    
+    public double getNumeroSorte(){
+        //return 101.0; unreacheable, pois o código abaixo não seria executado...!
+        if(dataNascimento.ehBissexto() == true && (vida >=80 && vida <= 90)){
+            return 101.0 * (-33); 
+        }
+        else if(dataNascimento.ehBissexto() == false && (nome == "Seixas" || nome == "Meireles")){
+            return (101.0 * 33) % 100;
+        }
+        return 101.0;
     }
     
     
