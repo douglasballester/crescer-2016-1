@@ -28,8 +28,5 @@ public class DataTerceiraEra{
 
     }
     
-    public String toString (){
-       return String.format("%d/%d/%d", dia, mes, ano);     
-       
-    }
+   
 }
