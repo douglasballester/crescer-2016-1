@@ -102,13 +102,74 @@ public class InventarioTest
          
      }
      
-      @Test
+     @Test
      public void itemMaisPopularCom3ItensNaBag(){
          Inventario bag = new Inventario();
          bag.adicionarItem(new Item (2, "Reaper"));
          bag.adicionarItem(new Item (5, "Shield"));
          bag.adicionarItem(new Item (3, "Feet"));
          assertEquals(bag.getItemMaisPopular().getQuantidade(), 5);
+         
+     }
+     
+     @Test
+     public void ordenarInventarioCom2Itens(){
+         Inventario bag = new Inventario();
+         
+         Item item = new Item(4, "Swords");
+         Item item2 = new Item(1, "Potion");
+         //Item item3 = new Item(3, "Flask");
+         
+         bag.adicionarItem(item);
+         bag.adicionarItem(item2);
+         //bag.adicionarItem(item3);
+         
+         Inventario bagEsperada = new Inventario();
+         
+         bagEsperada.adicionarItem(item2);
+         //bagEsperada.adicionarItem(item3);
+         bagEsperada.adicionarItem(item);
+         
+         bag.ordenarItens();
+         
+         assertEquals(bag.getDescricaoItens(), bagEsperada.getDescricaoItens());
+         
+     }
+     
+     @Test
+     public void ordenarInventarioCom3Itens(){
+         Inventario bag = new Inventario();
+         
+         Item item = new Item(4, "Swords");
+         Item item2 = new Item(1, "Potion");
+         Item item3 = new Item(3, "Flask");
+         //Item item4 = new Item(2, "OOOOOOOI");
+         bag.adicionarItem(item);
+         bag.adicionarItem(item2);
+         bag.adicionarItem(item3);
+         //bag.adicionarItem(item4);
+         
+         Inventario bagEsperada = new Inventario();
+         
+         bagEsperada.adicionarItem(item2);
+         //bagEsperada.adicionarItem(item4);
+         bagEsperada.adicionarItem(item3);
+         bagEsperada.adicionarItem(item);
+         
+         bag.ordenarItens();
+         
+         assertEquals(bagEsperada.getDescricaoItens(), bag.getDescricaoItens());
+         
+     }
+     
+     @Test
+     public void ordenarComInventarioVazio(){
+         Inventario bag = new Inventario();
+         
+         
+         bag.ordenarItens();
+         
+         assertEquals(bag.getDescricaoItens(),"");
          
      }
      

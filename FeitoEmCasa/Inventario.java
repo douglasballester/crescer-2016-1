@@ -1,4 +1,5 @@
 import java.util.*;
+
 public class Inventario{
     private ArrayList<Item> itens = new ArrayList<>() ;
     
@@ -51,5 +52,46 @@ public class Inventario{
     }
     
     
-   
+    public void ordenarItens(){
+        Item aux; 
+        if(!itens.isEmpty()){
+            for(int medSize = 1; medSize <= itens.size(); medSize++){ // SIZE começa em 1, get() começa em 0
+                int i = medSize - 1;
+                for(int medSizeA = medSize + 1; medSizeA <= itens.size(); medSizeA++){
+                    int j = medSizeA - 1;
+                    if(itens.get(j).getQuantidade() < itens.get(i).getQuantidade()){
+                        aux = itens.get(i);
+                        this.itens.set(i, itens.get(j));
+                        this.itens.set(j , aux);
+      
+                    }
+                }
+            }
+        }
+    
+        /*Item aux; 
+        for(int i = 1; i <= itens.size(); i++){ // SIZE começa em 1, get() começa em 0
+            
+            for(int j = 2; j <= itens.size(); j++){
+                
+                if(itens.get(j - 1).getQuantidade() < itens.get(i - 1).getQuantidade()){
+                    aux = itens.get(i - 1);
+                    this.itens.set(i - 1, itens.get(j - 1));
+                    this.itens.set(j , aux);
+      
+                }
+            }
+        }*/
+    }
 }
+        
+ 
+            
+
+
+        
+        
+
+    
+
+   
