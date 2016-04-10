@@ -85,6 +85,36 @@ public class InventarioTest
             
         }
         
+     @Test
+     public void itemMaisPopularComBagVazia(){
+         Inventario bag = new Inventario();
+         
+         assertNull(bag.getItemMaisPopular());
+         
+     }
+     
+     @Test
+     public void itemMaisPopularCom1ItemNaBag(){
+         Inventario bag = new Inventario();
+         bag.adicionarItem(new Item (2, "Reaper"));
+         
+         assertEquals(bag.getItemMaisPopular().getQuantidade(), 2);
+         
+     }
+     
+      @Test
+     public void itemMaisPopularCom3ItensNaBag(){
+         Inventario bag = new Inventario();
+         bag.adicionarItem(new Item (2, "Reaper"));
+         bag.adicionarItem(new Item (5, "Shield"));
+         bag.adicionarItem(new Item (3, "Feet"));
+         assertEquals(bag.getItemMaisPopular().getQuantidade(), 5);
+         
+     }
+     
+     
+     
+        
     }
     
     
