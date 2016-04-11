@@ -3,7 +3,7 @@ public class Dwarf{
     private int experiencia = 0 ,vida = 110;
     private String nome;
     private Status status = Status.VIVO;
-    private Inventario bag = new Inventario();
+    protected Inventario bag = new Inventario();
     private DataTerceiraEra dataNascimento;
     
     
@@ -96,11 +96,6 @@ public class Dwarf{
         }
     }
  
-
-   
-    /*private void tirarVida(){
-        this.vida -= 10;
-    }*/
     
     
     
