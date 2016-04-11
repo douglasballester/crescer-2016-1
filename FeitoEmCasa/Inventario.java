@@ -35,6 +35,13 @@ public class Inventario{
         }
         
     }
+    //Irish dwarf ganha 1000 * a soma da quantidade do item (1+2+3 == 6)
+    public void irishDwarfGanhaMuitasUnidades(){
+        for(int i=0; i < itens.size(); i++){
+            itens.get(i).irishDwarfGanhaUnidades();
+        }
+        
+    }
     
     public Item getItemMaisPopular(){
         int indice = 0 ,maiorQtd = 0;
@@ -68,7 +75,7 @@ public class Inventario{
                 }
             }
         }
-    
+        //tentativa de Ordernar os itens
         /*Item aux; 
         for(int i = 1; i <= itens.size(); i++){ // SIZE começa em 1, get() começa em 0
             
