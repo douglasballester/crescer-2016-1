@@ -26,6 +26,8 @@ public class Item{
         for(int i = 1; i <= quantidade; i++){
             quantAux += i;
         }
-        quantidade = quantidade + (quantAux * 1000);
+        quantidade += (quantAux * 1000);
     }
 }
+
+//P.A quantidade * (quantidade + 1)/2
