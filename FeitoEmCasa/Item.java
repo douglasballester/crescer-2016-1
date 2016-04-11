@@ -20,4 +20,12 @@ public class Item{
     public void ganhar1000Unidades(){
         this.quantidade += 1000;
     }
+    
+    public void irishDwarfGanhaUnidades(){
+        int quantAux = 0;
+        for(int i = 1; i <= quantidade; i++){
+            quantAux = quantAux + i;
+        }
+        quantidade = quantidade + (quantAux * 1000);
+    }
 }
