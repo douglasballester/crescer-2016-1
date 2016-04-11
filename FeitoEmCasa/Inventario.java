@@ -75,20 +75,8 @@ public class Inventario{
                 }
             }
         }
-        //tentativa de Ordernar os itens
-        /*Item aux; 
-        for(int i = 1; i <= itens.size(); i++){ // SIZE começa em 1, get() começa em 0
-            
-            for(int j = 2; j <= itens.size(); j++){
-                
-                if(itens.get(j - 1).getQuantidade() < itens.get(i - 1).getQuantidade()){
-                    aux = itens.get(i - 1);
-                    this.itens.set(i - 1, itens.get(j - 1));
-                    this.itens.set(j , aux);
-      
-                }
-            }
-        }*/
+        
+        
     }
 }
         
