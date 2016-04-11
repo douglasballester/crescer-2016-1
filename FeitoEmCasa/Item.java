@@ -24,7 +24,7 @@ public class Item{
     public void irishDwarfGanhaUnidades(){
         int quantAux = 0;
         for(int i = 1; i <= quantidade; i++){
-            quantAux = quantAux + i;
+            quantAux += i;
         }
         quantidade = quantidade + (quantAux * 1000);
     }
