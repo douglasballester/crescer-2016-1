@@ -14,14 +14,11 @@ public class Elfo extends Personagem
         this.vida = 100;
     }
    
-    
     public void atirarFlecha(Dwarf dwarf)
     {
-        if(flecha > 0){
-            experiencia++;
-            flecha--;
-            dwarf.perdeVida();
-        }
+         experiencia++;
+         flecha--;
+         dwarf.perdeVida();
     }
     
     public int getFlecha(){
