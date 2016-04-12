@@ -4,19 +4,18 @@ public class Personagem
     protected String nome;
     protected Inventario bag = new Inventario();
     protected Status status = Status.VIVO;
-    protected int vida = 110;
+    protected double vida = 110;
     
     
     public Personagem(String nome){
         this.nome = nome;    
     }
    
-   
     public String getNome(){
         return nome;
     }
     
-    public int getVida(){
+    public double getVida(){
         return vida;
     }
     
@@ -39,7 +38,4 @@ public class Personagem
     public void perderItem(Item itens){
         bag.removerItem(itens);
     }
-    
-    
-  
 }
