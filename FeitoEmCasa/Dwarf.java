@@ -4,13 +4,13 @@ public class Dwarf extends Personagem{
    
     public Dwarf(String nome){
         super(nome);
-        this.vida = 110;
+        this.vida = 110.0;
     }
     
     public Dwarf(String nome, DataTerceiraEra dataNascimento){
         super(nome);
         this.dataNascimento = dataNascimento;
-        this.vida = 110;
+        this.vida = 110.0;
     }
     
     
@@ -23,7 +23,7 @@ public class Dwarf extends Personagem{
         else if(numeroDaSorte > 100){
             
             if(vida > 0){
-                int vidaAposFlechada = vida - 10;
+                double vidaAposFlechada = vida - 10.0;
                 
                 if (vidaAposFlechada == 0){
                     status = Status.MORTO;
@@ -36,10 +36,6 @@ public class Dwarf extends Personagem{
         }
     }
     
-    public int getVida(){
-        return vida;
-    }
-    
     public Status getStatus(){
         return status;
     }
@@ -47,7 +43,6 @@ public class Dwarf extends Personagem{
     public DataTerceiraEra getDataNascimento(){
         return dataNascimento;
     }
-    
     
     public double getNumeroSorte(){
         //return 101.0; unreacheable, pois o código abaixo não seria executado...!
@@ -66,19 +61,4 @@ public class Dwarf extends Personagem{
                this.bag.ganhar1000UnidadesDeCadaItem();
         }
     }
- 
-    
-    
-    
-    //Declarar um Objeto:
-    //Dwarf gimli = null;
-    
-    
-    //Criação(instanciação);
-    //new Dwarf();
-    //Dwarf d1 = new Dwarf();
-    
-    
-    
-    
 }
