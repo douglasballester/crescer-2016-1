@@ -6,12 +6,14 @@ public class Elfo extends Personagem
      public Elfo(String nome){
         super(nome);
         this.vida = 100;
+        contElfo++;
     }
     
     public Elfo(String nome, int flecha){
         super(nome);
         this.flecha = flecha;
         this.vida = 100;
+        contElfo++;
     }
    
     public void atirarFlecha(Dwarf dwarf)
@@ -37,5 +39,4 @@ public class Elfo extends Personagem
             this.experiencia,
             experienciaNoSingular ? "nível" : "níveis");
     }
-      
 }

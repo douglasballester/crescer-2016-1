@@ -55,4 +55,13 @@ public class ElfoTest
         String textoEsperado = "null possui 41 flechas e 1 nível de experiência.";
         assertEquals(textoEsperado, elfo1.toString());
     }
+    
+    @Test
+    public void contadorDeElfos(){
+        int esperado = Personagem.getContElfo() + 3;
+        Elfo a1 = new ElfoNoturno("teste");
+        Elfo a3 = new Elfo("teste");
+        Elfo a2 = new ElfoVerde("teste");
+        assertEquals(esperado, Personagem.getContElfo());
+    }
 }
