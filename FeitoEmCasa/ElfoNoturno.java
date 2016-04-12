@@ -1,3 +1,6 @@
+/*Atualmente os Elfos Noturnos podem morrer atirando flechas? Justifique.
+ * Não, pois ele perde 5% de vida e não 100%. Logo ele vai ficar diminuindo até chegar 
+ * em um numero menor que 1 com inumeras casas decimas, porém nunca chega a 0.*/
 public class ElfoNoturno extends Elfo
 {   
     private double danoTomado;
