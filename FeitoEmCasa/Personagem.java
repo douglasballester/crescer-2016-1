@@ -5,7 +5,7 @@ public abstract class Personagem
     protected Inventario bag = new Inventario();
     protected Status status = Status.VIVO;
     protected double vida = 110;
-    
+    protected static int contElfo = 0;
     
     public Personagem(String nome){
         this.nome = nome;    
@@ -37,5 +37,9 @@ public abstract class Personagem
     
     public void perderItem(Item item){
         bag.removerItem(item);
+    }
+    
+    public static int getContElfo(){
+        return contElfo;
     }
 }
