@@ -20,24 +20,4 @@ public class IrishDwarf extends Dwarf{
             
         }
     }
- 
-
-   
-    /*private void tirarVida(){
-        this.vida -= 10;
-    }*/
-    
-    
-    
-    //Declarar um Objeto:
-    //Dwarf gimli = null;
-    
-    
-    //Criação(instanciação);
-    //new Dwarf();
-    //Dwarf d1 = new Dwarf();
-    
-    
-    
-    
 }
