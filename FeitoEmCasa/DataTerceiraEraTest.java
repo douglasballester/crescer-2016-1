@@ -29,8 +29,6 @@ public class DataTerceiraEraTest
         assertTrue(obtido);
      }
     
-    
-    
    @Test
     public void testeAnoNaoBis(){
         DataTerceiraEra teste = new DataTerceiraEra(22,11,1900);
@@ -38,8 +36,4 @@ public class DataTerceiraEraTest
         boolean obtido = teste.ehBissexto();
         assertFalse(obtido);
     }
-    
-     
- 
-
 }

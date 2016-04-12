@@ -22,7 +22,7 @@ public class IrishDwarfTest{
         jr.tentarSorte();
         
        assertEquals(-3333.0, jr.getNumeroSorte(), 0.1);
-       assertEquals(6003, jr.getInventario().getItens().get(0).getQuantidade());
+       assertEquals(6003, jr.getInventario().getInventarioItens().get(0).getQuantidade());
         
     }
     
@@ -42,8 +42,8 @@ public class IrishDwarfTest{
         jr.tentarSorte();
         
        assertEquals(-3333.0, jr.getNumeroSorte(), 0.1);
-       assertEquals(6003, jr.getInventario().getItens().get(0).getQuantidade());
-       assertEquals(3002, jr.getInventario().getItens().get(1).getQuantidade());
+       assertEquals(6003, jr.getInventario().getInventarioItens().get(0).getQuantidade());
+       assertEquals(3002, jr.getInventario().getInventarioItens().get(1).getQuantidade());
         
     }
     
@@ -58,7 +58,7 @@ public class IrishDwarfTest{
          
          jr.tentarSorte();
          
-         assertTrue(jr.getInventario().getItens().isEmpty());
+         assertTrue(jr.getInventario().getInventarioItens().isEmpty());
     }   
     
     

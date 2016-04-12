@@ -15,7 +15,6 @@ public class ItemTest
         teste.ganhar1000Unidades();
         
         assertEquals(teste.getQuantidade(),1000);
-        
     }
     
     @Test
@@ -26,9 +25,7 @@ public class ItemTest
         teste.ganhar1000Unidades();
         
         assertEquals(teste.getQuantidade(),1001);
-        
     }
-    
     
     @Test
     public void ganhar1000UnidadesCom3Itns()
@@ -45,7 +42,4 @@ public class ItemTest
         assertEquals(teste1.getQuantidade(),1002);
         assertEquals(teste2.getQuantidade(),1005);
     }
-    
-
-
 }

@@ -2,7 +2,6 @@ import java.util.*;
 import java.util.ArrayList;
 public class HobbitContador
 {
-     
     //retornar soma da diferença entre o produto e o mínimo múltiplo comum de cada par.
     public int calcularDiferenca(ArrayList<ArrayList<Integer>> arrayDePares){
         int num1 = 0 , num2 = 0 , mmc = 0, produto = 0;
@@ -18,17 +17,11 @@ public class HobbitContador
                   else{
                       mmc += calculaMmc(num2,num1);
                    }
-        
         }
             return produto - mmc;
     }
 
         
-        
-   
-     
-       
-    
     public int calculaMmc(int num1, int num2){
 
     int resto, a, b, mmc;
@@ -36,16 +29,6 @@ public class HobbitContador
     a = num1; //4 //15 //12
     b = num2; //5 //18 //60
     
-    //Numeros Primos entre si, o mmc é o produto desses numero.
-    
-    /*if (a > b && a % b != 0){
-        mmc = a*b/(a-b);
-        
-    }
-    else if(b > a && b % a !=0){
-        mmc = b*a/(b-a); //3 e 8
-        
-    }else{*/
         do {
             resto = a % b; //15
 
@@ -54,13 +37,34 @@ public class HobbitContador
 
         } while (resto != 0);
         mmc = (num1 * num2) / a;
-        
-    
-         //(10 * 5) / 10) == 5; //(15 * 18) / 15
         return mmc;
-    
-    
     }
- }
+    
+   
+    public int obterMaiorMultiploDeTresAte(int numero) {
+        //ArrayList<Integer> multiplos = new ArrayList<>(Arrays.asList(0)); nao precisa arrayList
+        int maiorMultiploTres = 0;
+            for (int i = numero; i >= 1; i--) {
+                if (i % 3 == 0) {
+                    maiorMultiploTres = i;
+                    break;
+                    //continue;
+                }
+            }
+
+       return maiorMultiploTres; //retornar um vetor inteiro? tem que retornar só o maior multiplo}
+    }
+ 
+    public ArrayList<Integer> obterMultiplosDeTresAte (int numero) {
+        ArrayList<Integer> multiplo = new ArrayList<>(Arrays.asList());
+                             //numero           
+        for (int i = 1; i <= numero; i++) {
+            if (i % 3 == 0) //break;
+            multiplo.add(i);
+        }
+
+        return multiplo;
+    }
+}
 
 
