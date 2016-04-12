@@ -36,10 +36,6 @@ public class Dwarf extends Personagem{
         }
     }
     
-    public Status getStatus(){
-        return status;
-    }
-    
     public DataTerceiraEra getDataNascimento(){
         return dataNascimento;
     }
