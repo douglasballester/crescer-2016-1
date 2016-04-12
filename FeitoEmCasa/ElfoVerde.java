@@ -13,9 +13,8 @@ public class ElfoVerde extends Elfo
     @Override
     public void atirarFlecha(Dwarf dwarf)
     {
-        experiencia += 2;
-        flecha--;
-        dwarf.perdeVida();
+        super.atirarFlecha(dwarf);    
+        experiencia++;
     }
     
     @Override
@@ -24,5 +23,4 @@ public class ElfoVerde extends Elfo
         itens.getDescricao().equalsIgnoreCase("Arco e Flecha de Vidro"))
         bag.adicionarItem(itens);
     }
-    
 }
