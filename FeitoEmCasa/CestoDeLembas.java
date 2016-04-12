@@ -1,10 +1,3 @@
-
-/**
- * Write a description of class CestoDeLembas here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class CestoDeLembas
 {
     private int numeroDeLembas;
