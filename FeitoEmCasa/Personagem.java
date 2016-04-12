@@ -31,11 +31,11 @@ public class Personagem
         return bag;
     }
     
-    public void adicionarItem(Item itens){
-        bag.adicionarItem(itens);
+    public void adicionarItem(Item item){
+        bag.adicionarItem(item);
     }
     
-    public void perderItem(Item itens){
-        bag.removerItem(itens);
+    public void perderItem(Item item){
+        bag.removerItem(item);
     }
 }
