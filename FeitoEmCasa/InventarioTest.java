@@ -8,16 +8,11 @@ public class InventarioTest
     @Test
     public void getDescricaoItensSemItem(){
         Inventario bag = new Inventario();
-     
-        
-        
+   
         String obtido = bag.getDescricaoItens();
         assertEquals("", obtido);
     }
-    
-    
-    
-    
+   
     @Test
     public void getDescricaoItensComUmItem(){
         Inventario bag = new Inventario();
@@ -48,7 +43,7 @@ public class InventarioTest
         Inventario bag = new Inventario();
         bag.ganhar1000UnidadesDeCadaItem();
    
-        assertTrue(bag.getItens().isEmpty());
+        assertTrue(bag.getInventarioItens().isEmpty());
     }
     
     @Test
@@ -58,7 +53,7 @@ public class InventarioTest
         bag.adicionarItem(new Item(5, "bows"));
         bag.ganhar1000UnidadesDeCadaItem();
    
-        assertEquals(1005, bag.getItens().get(0).getQuantidade());
+        assertEquals(1005, bag.getInventarioItens().get(0).getQuantidade());
     }
     
     @Test
@@ -68,7 +63,7 @@ public class InventarioTest
         for(int i=0; i < 10 ; i++){
             bag.adicionarItem(new Item(2, "bows"));
             bag.ganhar1000UnidadesDeCadaItem();
-            assertEquals(1002, bag.getItens().get(i).getQuantidade());
+            assertEquals(1002, bag.getInventarioItens().get(i).getQuantidade());
         }
     }   
         
@@ -77,12 +72,10 @@ public class InventarioTest
             Inventario bag = new Inventario();
             bag.adicionarItem(new Item (2, "Hammers"));
             bag.ganhar1000UnidadesDeCadaItem();
-            assertEquals(1002, bag.getItens().get(0).getQuantidade());
+            assertEquals(1002, bag.getInventarioItens().get(0).getQuantidade());
             bag.adicionarItem(new Item(15, "Arrows"));
             bag.ganhar1000UnidadesDeCadaItem();
-            assertEquals(1015, bag.getItens().get(1).getQuantidade());
-            
-            
+            assertEquals(1015, bag.getInventarioItens().get(1).getQuantidade());
         }
         
      @Test
@@ -165,18 +158,12 @@ public class InventarioTest
      @Test
      public void ordenarComInventarioVazio(){
          Inventario bag = new Inventario();
-         
-         
+     
          bag.ordenarItens();
          
          assertEquals(bag.getDescricaoItens(),"");
-         
      }
-     
-     
-     
-        
-    }
+}
     
     
     
