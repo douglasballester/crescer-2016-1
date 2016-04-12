@@ -26,14 +26,6 @@ public class ElfoVerdeTest
     }
     
     @Test
-    public void elfoVerdeAtiraFlechaEmUmDwarf() {
-        ElfoVerde arwen = new ElfoVerde("Arwen");
-        arwen.atirarFlecha(new Dwarf("Gimli"));
-        assertEquals(41, arwen.getFlecha());
-        assertEquals(2, arwen.getExperiencia());
-    }
-    
-    @Test
     public void adicionarItemCorretoNoElfoVerde(){
         ElfoVerde teste = new ElfoVerde("Bozo");
         

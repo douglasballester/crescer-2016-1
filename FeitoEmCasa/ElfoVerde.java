@@ -18,9 +18,9 @@ public class ElfoVerde extends Elfo
     }
     
     @Override
-    public void adicionarItem(Item inventarioItens){
-        if(inventarioItens.getDescricao().equalsIgnoreCase("Espada de Aço valiriano") ||
-        inventarioItens.getDescricao().equalsIgnoreCase("Arco e Flecha de Vidro"))
-        bag.adicionarItem(inventarioItens);
+    public void adicionarItem(Item item){
+        if(item.getDescricao().equalsIgnoreCase("Espada de Aço valiriano") ||
+        item.getDescricao().equalsIgnoreCase("Arco e Flecha de Vidro"))
+        bag.adicionarItem(item);
     }
 }
