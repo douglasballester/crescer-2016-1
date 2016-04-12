@@ -1,38 +1,32 @@
-public class Elfo
+public class Elfo extends Personagem
 {
     // variáveis de instância - substitua o exemplo abaixo pelo seu próprio
-    private int experiencia;
-    private int flecha = 42;
-    private String nome;
+    protected int flecha = 42;
 
-    public Elfo(String nome){
-        this.nome = nome;
+     public Elfo(String nome){
+        super(nome);
+        this.vida = 100;
     }
-    public Elfo(String nome, int flecha)
-    {
+    
+    public Elfo(String nome, int flecha){
+        super(nome);
         this.flecha = flecha;
-        this.nome = nome;
+        this.vida = 100;
     }
-
+   
+    
     public void atirarFlecha(Dwarf dwarf)
     {
-        experiencia++;
-        flecha--;
-        dwarf.perdeVida();
+        if(flecha > 0){
+            experiencia++;
+            flecha--;
+            dwarf.perdeVida();
+        }
     }
     
     public int getFlecha(){
         return this.flecha;
     } 
-    
-    public int getExperiencia(){
-        return this.experiencia;
-    }
-    
-    public String getNome(){
-        return this.nome;
-    }
-    
     
     public String toString() {
 

@@ -1,22 +1,16 @@
 import java.util.*;
-public class Dwarf{
-    private int experiencia = 0 ,vida = 110;
-    private String nome;
-    private Status status = Status.VIVO;
-    protected Inventario bag = new Inventario();
-    private DataTerceiraEra dataNascimento;
-    
-    
+public class Dwarf extends Personagem{
+    private DataTerceiraEra dataNascimento = new DataTerceiraEra(1,1,1);
+   
     public Dwarf(String nome){
+        super(nome);
         this.vida = 110;
-        this.nome = nome;
-        this.dataNascimento = new DataTerceiraEra(1,1,1);
-    
     }
     
     public Dwarf(String nome, DataTerceiraEra dataNascimento){
-        this(nome);
+        super(nome);
         this.dataNascimento = dataNascimento;
+        this.vida = 110;
     }
     
     
@@ -42,20 +36,8 @@ public class Dwarf{
         }
     }
     
-    public void setNome(String novoNome){
-        nome = novoNome;
-    }
-    
-    public String getNome(){
-        return nome;
-    }
-    
     public int getVida(){
         return vida;
-    }
-    
-    public int getExperiencia(){
-        return experiencia;
     }
     
     public Status getStatus(){
@@ -66,17 +48,6 @@ public class Dwarf{
         return dataNascimento;
     }
     
-    public Inventario getInventario(){
-        return bag;
-    }
-    
-    public void adicionarItem(Item itens){
-        bag.adicionarItem(itens);
-    }
-    
-    public void perderItem(Item itens){
-        bag.removerItem(itens);
-    }
     
     public double getNumeroSorte(){
         //return 101.0; unreacheable, pois o código abaixo não seria executado...!
