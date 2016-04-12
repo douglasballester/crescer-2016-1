@@ -163,6 +163,21 @@ public class InventarioTest
          
          assertEquals(bag.getDescricaoItens(),"");
      }
+     
+     @Test
+     public void equalsComInventariosIguais(){
+         Inventario a1 = new Inventario();
+         Inventario a2 = new Inventario();
+         Item b1 = new Item(1, "batata");
+         Item b2 = new Item(2, "Tomates");
+         
+         a1.adicionarItem(b1);
+         a1.adicionarItem(b2);
+         a2.adicionarItem(b1);
+         a2.adicionarItem(b2);
+         
+         assertEquals(a1, a2);
+     }
 }
     
     

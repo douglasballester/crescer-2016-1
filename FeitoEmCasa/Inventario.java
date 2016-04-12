@@ -20,6 +20,12 @@ public class Inventario{
         return inventarioItens;
     }
     
+    public boolean equals(Object obj){
+        Inventario outro = (Inventario)obj;
+         
+        return this.inventarioItens.equals(outro.inventarioItens); 
+    }
+    
     public String getDescricaoItens(){
         String listarItens = "";
         for(int i = 0; i < inventarioItens.size(); i++){
