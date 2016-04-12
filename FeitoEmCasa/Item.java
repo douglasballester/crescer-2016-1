@@ -28,5 +28,13 @@ public class Item{
         }
         quantidade += (quantAux * 1000); //P.A quantidade * (quantidade + 1)/2
     }
+    
+    public boolean equals(Object obj){
+        Item outro = (Item)obj;
+        return this.quantidade == outro.getQuantidade() &&
+            this.descricao != null &&
+            outro != null &&
+            this.descricao.equals(outro.descricao);
+    }
 }
 

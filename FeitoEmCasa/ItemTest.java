@@ -42,4 +42,18 @@ public class ItemTest
         assertEquals(teste1.getQuantidade(),1002);
         assertEquals(teste2.getQuantidade(),1005);
     }
+    
+   @Test
+   public void umItemIgualAoOutro() {
+       Item item1 = new Item(1, "Espada");
+       Item item2 = new Item(1, "Espada");
+       assertEquals(item1, item2);
+   }
+     
+   @Test
+   public void umItemNaoEhIgualAoOutro() {
+      Item item1 = new Item(1, "Espada");
+      Item item2 = new Item(2, "Espada");
+      assertTrue(!item1.equals(item2));
+   }
 }
