@@ -79,6 +79,5 @@ public class ElfoTest
         Elfo a2 = new ElfoVerde("Teste");
         
         assertEquals(a1,a2);
-        
     }
 }
