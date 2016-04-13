@@ -30,14 +30,6 @@ public class ElfoNoturnoTest
     }
     
     @Test
-    public void equalsNightElf(){
-        Elfo darkElf = new ElfoNoturno("teste");
-        ElfoNoturno darkElfJr = new ElfoNoturno("teste");
-        
-        assertEquals(darkElf,darkElfJr);
-    }
-    
-    @Test
     public void equalsNightElfMorto(){
         Elfo darkElf = new ElfoNoturno("teste");
         ElfoNoturno darkElfJr = new ElfoNoturno("teste");

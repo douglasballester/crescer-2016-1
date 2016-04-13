@@ -178,6 +178,15 @@ public class InventarioTest
          
          assertEquals(a1, a2);
      }
+     
+     @Test
+     public void equalsComInventarioVazio(){
+         Inventario a1 = new Inventario();
+         Inventario a2 = new Inventario();
+         Item b1 = new Item();
+         Item b2 = new Item();
+         assertEquals(a1, a2);
+     }
 }
     
     

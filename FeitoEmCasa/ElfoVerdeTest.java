@@ -57,9 +57,14 @@ public class ElfoVerdeTest
     }
     
     @Test
-    public void equalsElfoVerde(){
+    public void equalsElfoVerdeCom2ItensAdicionados(){
         Elfo greenElf = new ElfoVerde("teste");
         Elfo greenElfJr = new ElfoVerde("teste");
+        
+        greenElf.adicionarItem(new Item(2,"Arco e Flecha de Vidro"));
+        greenElf.adicionarItem(new Item(1,"Espada de Aço valiriano"));
+        greenElfJr.adicionarItem(new Item(2,"Arco e Flecha de Vidro"));
+        greenElfJr.adicionarItem(new Item(1,"Espada de Aço valiriano"));
         
         assertEquals(greenElf,greenElfJr);
     }
