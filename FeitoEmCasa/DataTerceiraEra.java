@@ -26,4 +26,11 @@ public class DataTerceiraEra{
         return(ano % 400 == 0 || ano % 4 == 0 && ano % 100 != 0);
 
     }
+    
+    public boolean equals(Object obj){
+        DataTerceiraEra ajudaData = (DataTerceiraEra)obj;
+        return this.dia == ajudaData.dia && 
+        this.mes == ajudaData.mes && 
+        this.ano == ajudaData.ano;
+    }
 }

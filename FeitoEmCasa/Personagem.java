@@ -42,4 +42,12 @@ public abstract class Personagem
     public static int getContElfo(){
         return contElfo;
     }
+    
+    public boolean equals(Object obj){
+        Personagem ajuda = (Personagem)obj;
+        return this.experiencia == ajuda.experiencia &&
+            this.nome.equals(ajuda.nome) &&
+            this.bag.equals(ajuda.bag) &&
+            this.status == ajuda.status;
+    }
 }

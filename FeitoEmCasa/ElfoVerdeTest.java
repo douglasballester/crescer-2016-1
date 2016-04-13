@@ -55,4 +55,12 @@ public class ElfoVerdeTest
         assertTrue(teste.getInventario().getInventarioItens().size() == 1);
         assertTrue(teste.getInventario().getInventarioItens().get(0).getDescricao().equalsIgnoreCase("Arco e Flecha de Vidro"));
     }
+    
+    @Test
+    public void equalsElfoVerde(){
+        Elfo greenElf = new ElfoVerde("teste");
+        Elfo greenElfJr = new ElfoVerde("teste");
+        
+        assertEquals(greenElf,greenElfJr);
+    }
 }

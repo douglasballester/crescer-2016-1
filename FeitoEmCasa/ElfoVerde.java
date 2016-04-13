@@ -23,4 +23,9 @@ public class ElfoVerde extends Elfo
         item.getDescricao().equalsIgnoreCase("Arco e Flecha de Vidro"))
         bag.adicionarItem(item);
     }
+    
+    public boolean equals(Object obj){
+        Elfo elfoVerde = (ElfoVerde)obj;
+        return super.equals(elfoVerde) && this.flecha == elfoVerde.flecha;
+    }
 }

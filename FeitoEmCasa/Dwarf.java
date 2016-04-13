@@ -62,4 +62,11 @@ public class Dwarf extends Personagem{
      
         return dwarf1.getVida() < dwarf2.getVida() ? dwarf1 : dwarf2;
     }
+    
+    public boolean equals(Object obj){
+        Dwarf ajudaDwarf = (Dwarf)obj;
+        return super.equals(ajudaDwarf) && 
+        this.dataNascimento.equals(ajudaDwarf.dataNascimento) && 
+        this.vida == ajudaDwarf.vida;
+    }
 }

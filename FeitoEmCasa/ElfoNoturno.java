@@ -21,4 +21,9 @@ public class ElfoNoturno extends Elfo
             status = Status.MORTO;
         }
     }
+    
+    public boolean equals(Object obj){
+        Elfo nightElf = (ElfoNoturno)obj;
+        return super.equals(nightElf) && this.flecha == nightElf.flecha;
+    }
 }

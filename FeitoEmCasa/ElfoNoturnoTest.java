@@ -29,4 +29,24 @@ public class ElfoNoturnoTest
         assertEquals(Status.MORTO, teste.getStatus());
     }
     
+    @Test
+    public void equalsNightElf(){
+        Elfo darkElf = new ElfoNoturno("teste");
+        ElfoNoturno darkElfJr = new ElfoNoturno("teste");
+        
+        assertEquals(darkElf,darkElfJr);
+    }
+    
+    @Test
+    public void equalsNightElfMorto(){
+        Elfo darkElf = new ElfoNoturno("teste");
+        ElfoNoturno darkElfJr = new ElfoNoturno("teste");
+        Dwarf alvo = new IrishDwarf("Alvo");
+        for(int i = 0; i < 90; i++){
+            darkElf.atirarFlecha(alvo);
+            darkElfJr.atirarFlecha(alvo);
+        }
+        assertEquals(darkElf,darkElfJr);
+    }
+    
 }

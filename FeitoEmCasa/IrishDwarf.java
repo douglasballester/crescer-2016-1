@@ -20,4 +20,9 @@ public class IrishDwarf extends Dwarf{
             
         }
     }
+    
+    public boolean equals(Object obj){
+        Dwarf ajudaIrish = (IrishDwarf)obj;
+        return super.equals(ajudaIrish);
+    }
 }

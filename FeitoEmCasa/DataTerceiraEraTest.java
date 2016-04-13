@@ -36,4 +36,11 @@ public class DataTerceiraEraTest
         boolean obtido = teste.ehBissexto();
         assertFalse(obtido);
     }
+    
+    @Test
+    public void equalsDataTerceiraEra(){
+        DataTerceiraEra d1 = new DataTerceiraEra(1,1,1);
+        DataTerceiraEra d2 = new DataTerceiraEra(1,1,1);
+        assertEquals(d1,d2);
+    }
 }

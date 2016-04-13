@@ -80,17 +80,9 @@ public class DwarfTest
     public void dwarfMorreCom0DeVida(){
         Dwarf dwarf = new Dwarf("Thorin");
         
-        dwarf.perdeVida();
-        dwarf.perdeVida();
-        dwarf.perdeVida();
-        dwarf.perdeVida();
-        dwarf.perdeVida();
-        dwarf.perdeVida();
-        dwarf.perdeVida();
-        dwarf.perdeVida();
-        dwarf.perdeVida();
-        dwarf.perdeVida();
-        dwarf.perdeVida();
+        for(int i=0; i < 11; i++){
+            dwarf.perdeVida();
+        }
         
         assertEquals(dwarf.getStatus(), Status.MORTO);
     }
@@ -99,20 +91,9 @@ public class DwarfTest
     public void dwarfNaoFicaCom20DeVidaNegativa(){
         Dwarf dwarf = new Dwarf("Thorin");
         
-        dwarf.perdeVida();
-        dwarf.perdeVida();
-        dwarf.perdeVida();
-        dwarf.perdeVida();
-        dwarf.perdeVida();
-        dwarf.perdeVida();
-        dwarf.perdeVida();
-        dwarf.perdeVida();
-        dwarf.perdeVida();
-        dwarf.perdeVida();
-        dwarf.perdeVida();
-        dwarf.perdeVida();
-        dwarf.perdeVida();
-        
+        for(int i=0; i < 13; i++){
+            dwarf.perdeVida();
+        }
         assertEquals(dwarf.getVida(), 0, 0.0);
     }
     
@@ -177,6 +158,13 @@ public class DwarfTest
         Dwarf d2 = new Dwarf("D2");
         d2.perdeVida();
         assertEquals(d2, Dwarf.descobrirMenosVida(d1,d2));
+    }
+    
+    @Test
+    public void equalsDwarf(){
+       Dwarf a1 = new Dwarf("gimli");
+       Dwarf a2 = new Dwarf("gimli");
+       assertEquals(a1,a2);
     }
 }
    

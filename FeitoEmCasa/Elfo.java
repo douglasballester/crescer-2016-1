@@ -27,6 +27,11 @@ public class Elfo extends Personagem
         return this.flecha;
     } 
     
+    public boolean equals(Object obj){
+        Elfo outro = (Elfo)obj;
+        return super.equals(outro) && this.flecha == outro.flecha;
+    }
+    
     public String toString() {
 
         boolean flechaNoSingular = Math.abs(this.flecha) == 1;

@@ -64,4 +64,22 @@ public class ElfoTest
         Elfo a2 = new ElfoVerde("teste");
         assertEquals(esperado, Personagem.getContElfo());
     }
+    
+    @Test
+    public void equalsElfos(){
+        Elfo a1 = new Elfo("Teste");
+        Elfo a2 = new Elfo("Teste");
+        
+        assertEquals(a1,a2);
+        
+    }
+    
+    @Test
+    public void equalsElfosVerdes(){
+        Elfo a1 = new ElfoVerde("Teste");
+        Elfo a2 = new ElfoVerde("Teste");
+        
+        assertEquals(a1,a2);
+        
+    }
 }
