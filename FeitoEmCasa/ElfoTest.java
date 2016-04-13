@@ -58,11 +58,11 @@ public class ElfoTest
     
     @Test
     public void contadorDeElfos(){
-        int esperado = Personagem.getContElfo() + 3;
+        int esperado = Elfo.getContElfo() + 3;
         Elfo a1 = new ElfoNoturno("teste");
         Elfo a3 = new Elfo("teste");
         Elfo a2 = new ElfoVerde("teste");
-        assertEquals(esperado, Personagem.getContElfo());
+        assertEquals(esperado, Elfo.getContElfo());
     }
     
     @Test
@@ -71,7 +71,6 @@ public class ElfoTest
         Elfo a2 = new Elfo("Teste");
         
         assertEquals(a1,a2);
-        
     }
     
     @Test

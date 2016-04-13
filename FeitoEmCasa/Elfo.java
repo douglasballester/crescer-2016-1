@@ -1,8 +1,7 @@
 public class Elfo extends Personagem
 {
-    // variáveis de instância - substitua o exemplo abaixo pelo seu próprio
     protected int flecha = 42;
-
+    protected static int contElfo = 0;
      public Elfo(String nome){
         super(nome);
         this.vida = 100;
@@ -21,6 +20,10 @@ public class Elfo extends Personagem
          experiencia++;
          flecha--;
          dwarf.perdeVida();
+    }
+    
+    public static int getContElfo(){
+        return contElfo;
     }
     
     public int getFlecha(){
