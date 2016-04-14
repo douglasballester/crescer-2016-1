@@ -67,4 +67,44 @@ public class ExercitoDeElfosTest
         assertTrue(army.getExercitoAgrupado().containsKey(Status.VIVO) &&
                    army.getExercitoAgrupado().containsKey(Status.MORTO));
     }
+    
+    @Test
+    public void exercitoAgrupadoCom2MortosENenhumVivo(){
+        Elfo elf1 = new ElfoNoturno("anastacia");
+        Elfo elf2 = new ElfoVerde("robin hood");
+        do{
+            elf1.atirarFlecha(new Dwarf("alvo"));
+            elf2.atirarFlecha(new Dwarf("alvojr"));
+        }while(elf1.getStatus() == Status.VIVO);
+        ExercitoDeElfos army = new ExercitoDeElfos();
+        army.alistarElfo(elf1);
+        army.alistarElfo(elf2);        
+       
+        army.agruparPorStatus();
+        
+        assertTrue(army.getExercitoAgrupado().containsKey(Status.MORTO));
+    }
+    
+    @Test
+    public void exercitoAgrupadoCom2VivosENenhumMorto(){
+        Elfo elf1 = new ElfoNoturno("anastacia");
+        Elfo elf2 = new ElfoVerde("robin hood");
+
+        ExercitoDeElfos army = new ExercitoDeElfos();
+        army.alistarElfo(elf1);
+        army.alistarElfo(elf2);        
+       
+        army.agruparPorStatus();
+        
+        assertFalse(army.getExercitoAgrupado().containsKey(Status.MORTO));
+    }
+    
+    @Test
+    public void exercitoAgrupadoSemElfos(){
+        ExercitoDeElfos army = new ExercitoDeElfos();        
+       
+        army.agruparPorStatus();
+        
+        assertTrue(army.getExercitoAgrupado().isEmpty());
+    }
 }
