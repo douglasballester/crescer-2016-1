@@ -24,7 +24,6 @@ public class ExercitoDeElfos
                 elfosAgrupadosPorStatus.put(elfo.getStatus(), new ArrayList<Elfo>()); 
             }
                 elfosAgrupadosPorStatus.get(elfo.getStatus()).add(elfo);
-            
         }
     }
     

@@ -47,4 +47,8 @@ public class Elfo extends Personagem
             this.experiencia,
             experienciaNoSingular ? "nível" : "níveis");
     }
+    
+    public void tentarSorte(){
+        System.out.println("Elfo tentou a sorte");
+    }
 }

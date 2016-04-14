@@ -45,4 +45,6 @@ public abstract class Personagem
             this.bag.equals(ajuda.bag) &&
             this.status == ajuda.status;
     }
+    
+    public abstract void tentarSorte();
 }

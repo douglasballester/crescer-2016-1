@@ -8,8 +8,8 @@ public class ExercitoDeElfosTest
 {    
     @Test
     public void invitarElfoNormal(){
-        ExercitoDeElfos army = new ExercitoDeElfos();
-        Elfo e1 = new Elfo("haldir");
+       ExercitoDeElfos army = new ExercitoDeElfos();
+       Elfo e1 = new Elfo("haldir");
         
        army.alistarElfo(e1);
        
@@ -106,5 +106,21 @@ public class ExercitoDeElfosTest
         army.agruparPorStatus();
         
         assertTrue(army.getExercitoAgrupado().isEmpty());
+    }
+    
+    @Test
+    public void invitar1ElfoVerdeE1NoturnoComMesmoNome(){
+        ExercitoDeElfos army = new ExercitoDeElfos();
+        Elfo elf1 = new ElfoVerde("NomeIgual");
+        Elfo elf2 = new ElfoNoturno("NomeIgual");
+        
+        do{
+            elf2.atirarFlecha(new Dwarf("teste"));
+        }while (elf2.getStatus() == Status.VIVO);
+        
+        army.alistarElfo(elf2);
+        army.alistarElfo(elf1);
+        
+      //  assertTrue(army.getExercitoDeElfos().get("NomeIgual")elf2);
     }
 }
