@@ -10,14 +10,16 @@ public class ExercitoDeElfosTest
     public void invitarElfoNormal(){
        ExercitoDeElfos army = new ExercitoDeElfos();
        Elfo e1 = new Elfo("haldir");
-        
-       army.alistarElfo(e1);
-       
+       try{ 
+           army.alistarElfo(e1);
+        }catch (NaoPodeAlistarException npae){
+            System.out.println(npae);
+        }
        assertEquals(false, army.getExercitoDeElfos().containsValue(e1));
     }
     
     @Test
-    public void invitarElfoVerdeENoturno(){
+    public void invitarElfoVerdeENoturno ()  throws NaoPodeAlistarException{
        ExercitoDeElfos army = new ExercitoDeElfos();
        Elfo e1 = new ElfoVerde("haldir");
        Elfo e2 = new ElfoNoturno("legolas");
@@ -29,7 +31,7 @@ public class ExercitoDeElfosTest
     }
     
     @Test
-    public void invitarElfoNormalComElfoNoturno(){
+    public void invitarElfoNormalComElfoNoturno()  throws NaoPodeAlistarException{
        ExercitoDeElfos army = new ExercitoDeElfos();
        Elfo e1 = new Elfo("haldir");
        Elfo e2 = new ElfoNoturno("legolas");
@@ -41,7 +43,7 @@ public class ExercitoDeElfosTest
     } 
     
     @Test
-    public void buscarElfoPorNome(){
+    public void buscarElfoPorNome()  throws NaoPodeAlistarException{
         // busca elfo por nome e retorna objeto elfo.
         ExercitoDeElfos army = new ExercitoDeElfos();
         Elfo e1 = new ElfoNoturno("Elrond");
@@ -52,7 +54,7 @@ public class ExercitoDeElfosTest
     }
     
     @Test
-    public void exercitoAgrupadoCom1MortoE1Vivo(){
+    public void exercitoAgrupadoCom1MortoE1Vivo()  throws NaoPodeAlistarException{
         Elfo elf1 = new ElfoNoturno("anastacia");
         Elfo elf2 = new ElfoVerde("robin hood");
         do{
@@ -69,7 +71,7 @@ public class ExercitoDeElfosTest
     }
     
     @Test
-    public void exercitoAgrupadoCom2MortosENenhumVivo(){
+    public void exercitoAgrupadoCom2MortosENenhumVivo()  throws NaoPodeAlistarException{
         Elfo elf1 = new ElfoNoturno("anastacia");
         Elfo elf2 = new ElfoVerde("robin hood");
         do{
@@ -86,7 +88,7 @@ public class ExercitoDeElfosTest
     }
     
     @Test
-    public void exercitoAgrupadoCom2VivosENenhumMorto(){
+    public void exercitoAgrupadoCom2VivosENenhumMorto()  throws NaoPodeAlistarException{
         Elfo elf1 = new ElfoNoturno("anastacia");
         Elfo elf2 = new ElfoVerde("robin hood");
 
@@ -109,7 +111,7 @@ public class ExercitoDeElfosTest
     }
     
     @Test
-    public void invitar1ElfoVerdeE1NoturnoComMesmoNome(){
+    public void invitar1ElfoVerdeE1NoturnoComMesmoNome()  throws NaoPodeAlistarException{
         ExercitoDeElfos army = new ExercitoDeElfos();
         Elfo elf1 = new ElfoVerde("NomeIgual");
         Elfo elf2 = new ElfoNoturno("NomeIgual");
@@ -121,6 +123,6 @@ public class ExercitoDeElfosTest
         army.alistarElfo(elf2);
         army.alistarElfo(elf1);
         
-      //  assertTrue(army.getExercitoDeElfos().get("NomeIgual")elf2);
+      //assertTrue(army.getExercitoDeElfos().get("NomeIgual")elf2);
     }
 }

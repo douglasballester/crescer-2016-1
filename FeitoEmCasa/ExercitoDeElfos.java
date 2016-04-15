@@ -1,12 +1,13 @@
 import java.util.*;
-public class ExercitoDeElfos
-{
+public class ExercitoDeElfos{
     private HashMap<String, Elfo> exercito = new HashMap<>();
     private HashMap<Status, ArrayList<Elfo>> elfosAgrupadosPorStatus = new HashMap<>();
     
-    public void alistarElfo(Elfo elfo){
+    public void alistarElfo (Elfo elfo) throws NaoPodeAlistarException{
         if(elfo instanceof ElfoVerde || elfo instanceof ElfoNoturno){
             exercito.put(elfo.getNome(), elfo);
+        }else{
+            throw new NaoPodeAlistarException();
         }
     }
     
@@ -33,5 +34,9 @@ public class ExercitoDeElfos
     
       public ArrayList<Elfo> buscarPorStatus(Status status){
         return elfosAgrupadosPorStatus.get(status);
+    }
+    
+    public void atacar(EstrategiaUm estrategia, ArrayList <Dwarf> dwarves){
+        estrategia.atacar(this, dwarves);
     }
 }

@@ -2,7 +2,14 @@ import java.util.*;
 
 public class DicionarioSindarin {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        try{
+            int resultado = 13/0;
+        }catch (ArithmeticException ae){
+            System.out.println("Tipo ArithmeticException");
+        }catch (Exception e){
+            System.out.println("Tipo Exception");
+        }
+        /*Scanner scanner = new Scanner(System.in);
         System.out.println("Bem vindo ao tradutor Sindarin! Escolha a linguagem: ");
         System.out.println("[P]ortugues [I]ngles");
         String idioma = scanner.nextLine();
@@ -16,8 +23,10 @@ public class DicionarioSindarin {
             break;
             default:
                 tradutor = new SindarinParaPortugues();
+
+                System.out.println(palavra + " significa " + tradutor.traduzir(palavra));
             break;
-        }
+        }*/
         //System.out.println("Naur significa " + tradutor.traduzir("naur"));
     }
     
