@@ -4,48 +4,147 @@ import org.junit.Before;
 import org.junit.Test;
 import java.util.*;
 public class EstrategiaDoisTest{
-   @Test
-    public void ataqueComVerdesENoturnoMorto() throws NaoPodeAlistarException {
-      
+    @Test
+    public void ataqueNoVazio() throws NaoPodeAlistarException{
         ExercitoDeElfos exercito = new ExercitoDeElfos();
         exercito.escolherEstrategia(new EstrategiaDois());
-        Elfo en1 = new ElfoNoturno("Night 1");
-        Elfo en2 = new ElfoNoturno("Night 2");
-        Elfo ev1 = new ElfoVerde("Green 1");
-        Elfo en3 = new ElfoNoturno("Night 3");
-        Elfo ev2 = new ElfoVerde("Green 2");
-        for (int i = 0; i < 90; i++) en1.atirarFlecha(new Dwarf("D1"));
-        exercito.alistarElfo(en1);
-        exercito.alistarElfo(en2);
-        exercito.alistarElfo(ev1);
-        exercito.alistarElfo(en3);
-        exercito.alistarElfo(ev2);
-        ArrayList<Elfo> esperado = new ArrayList<>(Arrays.asList(ev2, ev1, en3, en2));
-   
-        exercito.atacar(new ArrayList<>(Arrays.asList(new Dwarf("D1"), new Dwarf("D2"), new Dwarf("D3"))));
- 
-        assertEquals(esperado, exercito.ordemDeAtaque());
+        Elfo elfo1 = new ElfoVerde("G1");
+        Elfo elfo2 = new ElfoVerde("G2");
+        exercito.alistarElfo(elfo1);
+        exercito.alistarElfo(elfo2);
+        
+        ArrayList<Dwarf> dwarves = new ArrayList<>();
+        exercito.atacar(dwarves);        
+        List<Elfo> ordemAtaque = exercito.ordemDeAtaque();
+        
+        
+        
+        assertEquals(0, ordemAtaque.size());
     }
     
     @Test
-    public void exercitoEmbaralhadoPriorizaAtaqueComElfosVerdes() throws NaoPodeAlistarException {
-     
+    public void ataqueSoComVerdes() throws NaoPodeAlistarException {
         ExercitoDeElfos exercito = new ExercitoDeElfos();
         exercito.escolherEstrategia(new EstrategiaDois());
-        Elfo elfoNot1 = new ElfoNoturno("eN1");
-        Elfo elfoNot2 = new ElfoNoturno("eN2");
-        Elfo elfoNot3 = new ElfoNoturno("eN3");
-        Elfo elfVer1 = new ElfoVerde("V1");
-        Elfo elfVer2 = new ElfoVerde("V2");
-        exercito.alistarElfo(elfoNot1);
-        exercito.alistarElfo(elfoNot2);
-        exercito.alistarElfo(elfVer1);
-        exercito.alistarElfo(elfoNot3);
-        exercito.alistarElfo(elfVer2);
-        ArrayList<Elfo> esperado = new ArrayList<>(Arrays.asList(elfVer1, elfVer2, elfoNot2, elfoNot1, elfoNot3));
-    
-        exercito.atacar(new ArrayList<>(Arrays.asList(new Dwarf("anao1"), new Dwarf("anao2"), new Dwarf("anao3"))));
-   
-        assertEquals(esperado, exercito.ordemDeAtaque());
+        Elfo elfo1 = new ElfoVerde("G1");
+        Elfo elfo2 = new ElfoVerde("G2");
+        exercito.alistarElfo(elfo1);
+        exercito.alistarElfo(elfo2);
+        exercito.atacar(new ArrayList<>(Arrays.asList(new Dwarf("D1"))));
+        
+        List<Elfo> ordemAtaque = exercito.ordemDeAtaque();
+        
+        assertEquals(elfo1, ordemAtaque.get(0));
+        assertEquals(elfo2, ordemAtaque.get(1));
+        
+        assertEquals(2, ordemAtaque.size());
     }
+    
+      @Test
+    public void ataqueSoComNoturnos() throws NaoPodeAlistarException {
+        ExercitoDeElfos exercito = new ExercitoDeElfos();
+        exercito.escolherEstrategia(new EstrategiaDois());
+        Elfo elfo1 = new ElfoNoturno("N1");
+        Elfo elfo2 = new ElfoNoturno("N2");
+        exercito.alistarElfo(elfo1);
+        exercito.alistarElfo(elfo2);
+        exercito.atacar(new ArrayList<>(Arrays.asList(new Dwarf("D1"))));
+        
+        List<Elfo> ordemAtaque = exercito.ordemDeAtaque();
+        
+        assertEquals(elfo1, ordemAtaque.get(0));
+        assertEquals(elfo2, ordemAtaque.get(1));
+        
+        assertEquals(2, ordemAtaque.size());
+    }
+    
+    @Test
+    public void ataqueComVerdesEUmNoturno() throws NaoPodeAlistarException {
+        ExercitoDeElfos exercito = new ExercitoDeElfos();
+        exercito.escolherEstrategia(new EstrategiaDois());
+        Elfo elfo1 = new ElfoVerde("G1");
+        Elfo elfo2 = new ElfoVerde("G2");
+        Elfo elfo3 = new ElfoNoturno("N1");
+        exercito.alistarElfo(elfo1);
+        exercito.alistarElfo(elfo2);
+        exercito.alistarElfo(elfo3);
+        exercito.atacar(new ArrayList<>(Arrays.asList(new Dwarf("D1"))));
+        
+        List<Elfo> ordemAtaque = exercito.ordemDeAtaque();
+        
+        assertEquals(elfo1, ordemAtaque.get(0));
+        assertEquals(elfo2, ordemAtaque.get(1));
+        assertEquals(elfo3, ordemAtaque.get(2));
+        assertEquals(3, ordemAtaque.size());
+    }
+    
+     @Test
+    public void ataqueComVerdesEUmNoturnoCriandoEAlistantoNoturnoPorSegundo() throws NaoPodeAlistarException {
+        ExercitoDeElfos exercito = new ExercitoDeElfos();
+        exercito.escolherEstrategia(new EstrategiaDois());
+        Elfo elfo1 = new ElfoVerde("G1");
+        Elfo elfo3 = new ElfoNoturno("N1");
+        Elfo elfo2 = new ElfoVerde("G2");
+       
+        exercito.alistarElfo(elfo1);
+        exercito.alistarElfo(elfo3);
+        exercito.alistarElfo(elfo2);
+        exercito.atacar(new ArrayList<>(Arrays.asList(new Dwarf("D1"))));
+        
+        List<Elfo> ordemAtaque = exercito.ordemDeAtaque();
+        
+        assertEquals(elfo1, ordemAtaque.get(0));
+        assertEquals(elfo2, ordemAtaque.get(1));
+        assertEquals(elfo3, ordemAtaque.get(2));
+        assertEquals(3, ordemAtaque.size());
+    }
+    
+     @Test
+    public void ataqueComVerdesEUmNoturnoCridoEAlistadoPrimeiro() throws NaoPodeAlistarException {
+        ExercitoDeElfos exercito = new ExercitoDeElfos();
+        exercito.escolherEstrategia(new EstrategiaDois());
+        Elfo elfo3 = new ElfoNoturno("N1");
+        Elfo elfo1 = new ElfoVerde("G1");
+        Elfo elfo2 = new ElfoVerde("G2");
+        
+        exercito.alistarElfo(elfo3);
+        exercito.alistarElfo(elfo1);
+        exercito.alistarElfo(elfo2);
+        exercito.atacar(new ArrayList<>(Arrays.asList(new Dwarf("D1"),new Dwarf("D2"))));
+        
+        List<Elfo> ordemAtaque = exercito.ordemDeAtaque();
+        
+        assertEquals(elfo1, ordemAtaque.get(0));
+        assertEquals(elfo2, ordemAtaque.get(1));
+        assertEquals(elfo3, ordemAtaque.get(2));
+        assertEquals(3, ordemAtaque.size());
+    }
+    
+     @Test
+    public void ataqueComVerdesENoturnosComArrayMisturado() throws NaoPodeAlistarException {
+        ExercitoDeElfos exercito = new ExercitoDeElfos();
+        exercito.escolherEstrategia(new EstrategiaDois());
+        Elfo elfo3 = new ElfoNoturno("N1");
+        Elfo elfo1 = new ElfoVerde("G1");
+        Elfo elfo4 = new ElfoNoturno("N2");
+        Elfo elfo5 = new ElfoNoturno("N3");
+        Elfo elfo2 = new ElfoVerde("G2");
+        
+        exercito.alistarElfo(elfo3);
+        exercito.alistarElfo(elfo1);
+        exercito.alistarElfo(elfo4);
+        exercito.alistarElfo(elfo5);
+        exercito.alistarElfo(elfo2);
+        exercito.atacar(new ArrayList<>(Arrays.asList(new Dwarf("D1"))));
+        
+        List<Elfo> ordemAtaque = exercito.ordemDeAtaque();
+        
+        assertEquals(elfo1, ordemAtaque.get(0));
+        assertEquals(elfo2, ordemAtaque.get(1));
+        assertEquals(elfo3, ordemAtaque.get(2));
+        assertEquals(elfo4, ordemAtaque.get(3));
+        assertEquals(elfo5, ordemAtaque.get(4));
+        assertEquals(5, ordemAtaque.size());
+    } 
 }
+   

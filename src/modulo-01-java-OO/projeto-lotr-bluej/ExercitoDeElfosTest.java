@@ -123,6 +123,6 @@ public class ExercitoDeElfosTest
         army.alistarElfo(elf2);
         army.alistarElfo(elf1);
         
-      //assertTrue(army.getExercitoDeElfos().get("NomeIgual")elf2);
+      assertFalse(army.getExercitoDeElfos().containsKey(Status.MORTO));
     }
 }
