@@ -1,6 +1,6 @@
 public abstract class Personagem
 {
-    protected int experiencia = 0;
+    protected int experiencia;
     protected String nome;
     protected Inventario bag = new Inventario();
     protected Status status = Status.VIVO;
