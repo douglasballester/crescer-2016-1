@@ -54,7 +54,7 @@ public class ExercitoDeElfosTest
     }
     
     @Test
-    public void exercitoAgrupadoCom1MortoE1Vivo()  throws NaoPodeAlistarException{
+    public void buscarElfoVivo()  throws NaoPodeAlistarException{
         Elfo elf1 = new ElfoNoturno("anastacia");
         Elfo elf2 = new ElfoVerde("robin hood");
         do{
@@ -62,18 +62,18 @@ public class ExercitoDeElfosTest
         }while(elf1.getStatus() == Status.VIVO);
         ExercitoDeElfos army = new ExercitoDeElfos();
         army.alistarElfo(elf1);
-        army.alistarElfo(elf2);        
-       
-        army.agruparPorStatus();
+        army.alistarElfo(elf2);   
         
-        assertTrue(army.getExercitoAgrupado().containsKey(Status.VIVO) &&
-                   army.getExercitoAgrupado().containsKey(Status.MORTO));
+        army.agruparPorStatus();
+        ArrayList<Elfo> vivo = army.buscarPorStatus(Status.VIVO);
+
+        assertTrue(vivo.contains(elf2));   
     }
     
     @Test
     public void exercitoAgrupadoCom2MortosENenhumVivo()  throws NaoPodeAlistarException{
         Elfo elf1 = new ElfoNoturno("anastacia");
-        Elfo elf2 = new ElfoVerde("robin hood");
+        Elfo elf2 = new ElfoNoturno("robin hood");
         do{
             elf1.atirarFlecha(new Dwarf("alvo"));
             elf2.atirarFlecha(new Dwarf("alvojr"));
@@ -83,8 +83,8 @@ public class ExercitoDeElfosTest
         army.alistarElfo(elf2);        
        
         army.agruparPorStatus();
-        
-        assertTrue(army.getExercitoAgrupado().containsKey(Status.MORTO));
+        ArrayList<Elfo> morto = army.buscarPorStatus(Status.MORTO);
+        assertTrue(morto.contains(elf1) && morto.contains(elf2));
     }
     
     @Test
@@ -97,8 +97,8 @@ public class ExercitoDeElfosTest
         army.alistarElfo(elf2);        
        
         army.agruparPorStatus();
-        
-        assertFalse(army.getExercitoAgrupado().containsKey(Status.MORTO));
+        ArrayList<Elfo> vivo = army.buscarPorStatus(Status.VIVO);
+        assertTrue(vivo.contains(elf1) && vivo.contains(elf2));
     }
     
     @Test
@@ -107,7 +107,8 @@ public class ExercitoDeElfosTest
        
         army.agruparPorStatus();
         
-        assertTrue(army.getExercitoAgrupado().isEmpty());
+        assertNull(army.buscarPorStatus(Status.VIVO));
+        assertNull(army.buscarPorStatus(Status.MORTO));
     }
     
     @Test
@@ -117,12 +118,15 @@ public class ExercitoDeElfosTest
         Elfo elf2 = new ElfoNoturno("NomeIgual");
         
         do{
-            elf2.atirarFlecha(new Dwarf("teste"));
-        }while (elf2.getStatus() == Status.VIVO);
+            elf2.atirarFlecha(new Dwarf("oi"));
+        }while(elf2.getStatus() == Status.VIVO);
         
         army.alistarElfo(elf2);
         army.alistarElfo(elf1);
         
-      assertFalse(army.getExercitoDeElfos().containsKey(Status.MORTO));
+      army.agruparPorStatus();
+      ArrayList<Elfo> deuRuim = army.buscarPorStatus(Status.MORTO);
+      //Elfo noturno está morto, deveria constar no array deuRuim. Mas foi sub pelo verde
+      assertNull(deuRuim);
     }
 }

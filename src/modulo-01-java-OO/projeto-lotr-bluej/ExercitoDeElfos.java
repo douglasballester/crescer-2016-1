@@ -14,8 +14,8 @@ public class ExercitoDeElfos{
         return exercito.get(nome);
     }
     
-    public HashMap getExercitoDeElfos(){
-        return exercito;
+    public HashMap<String, Elfo> getExercitoDeElfos(){
+        return this.exercito;
     }
     
     public void agruparPorStatus(){
@@ -27,11 +27,7 @@ public class ExercitoDeElfos{
         }
     }
     
-    public HashMap getExercitoAgrupado(){
-        return elfosAgrupadosPorStatus;
-    }
-    
-      public ArrayList<Elfo> buscarPorStatus(Status status){
+    public ArrayList<Elfo> buscarPorStatus(Status status){
         return elfosAgrupadosPorStatus.get(status);
     }
     
