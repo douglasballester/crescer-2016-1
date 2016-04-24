@@ -4,10 +4,6 @@ public class Inventario{
     private ArrayList<Item> inventarioItens = new ArrayList<>() ;
     
     
-    public Inventario(){
-        inventarioItens = new ArrayList<Item>();
-    }
-    
      public void adicionarItem(Item item){
         inventarioItens.add(item);
     }
@@ -68,10 +64,8 @@ public class Inventario{
     public void ordenarItens(){
         Item aux; 
         if(!inventarioItens.isEmpty()){
-            for(int medSize = 1; medSize <= inventarioItens.size(); medSize++){ // SIZE começa em 1, get() começa em 0
-                int i = medSize - 1;
-                for(int medSizeA = medSize + 1; medSizeA <= inventarioItens.size(); medSizeA++){
-                    int j = medSizeA - 1;
+            for(int i = 0; i < inventarioItens.size(); i++){
+                for(int j = i + 1; j < inventarioItens.size(); j++){
                     if(inventarioItens.get(j).getQuantidade() < inventarioItens.get(i).getQuantidade()){
                         aux = inventarioItens.get(i);
                         this.inventarioItens.set(i, inventarioItens.get(j));
