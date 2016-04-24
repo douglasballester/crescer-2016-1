@@ -14,8 +14,8 @@ public class ExercitoDeElfos{
         return exercito.get(nome);
     }
     
-    public HashMap<String, Elfo> getExercitoDeElfos(){
-        return this.exercito;
+    public ArrayList<Elfo> getExercitoDeElfos(){
+        return new ArrayList<Elfo>(exercito.values());
     }
     
     public void agruparPorStatus(){
@@ -36,7 +36,7 @@ public class ExercitoDeElfos{
     }
     
     public void atacar(ArrayList <Dwarf> dwarves){
-        estrategia.atacar(new ArrayList<Elfo>(exercito.values()), dwarves);
+        estrategia.atacar(getExercitoDeElfos(), dwarves);
     }
     
     public void escolherEstrategia(EstrategiaGuerra estrategia) {
