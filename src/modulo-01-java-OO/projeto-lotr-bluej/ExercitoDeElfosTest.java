@@ -15,7 +15,7 @@ public class ExercitoDeElfosTest
         }catch (NaoPodeAlistarException npae){
             System.out.println(npae);
         }
-       assertEquals(false, army.getExercitoDeElfos().contains(e1));
+       assertEquals(false, army.getExercitoDeElfos().containsValue(e1));
     }
     
     @Test
@@ -26,8 +26,8 @@ public class ExercitoDeElfosTest
         
        army.alistarElfo(e1);
        army.alistarElfo(e2);
-       assertEquals(true, army.getExercitoDeElfos().contains(e1));
-       assertEquals(true, army.getExercitoDeElfos().contains(e2));
+       assertEquals(true, army.getExercitoDeElfos().containsValue(e1));
+       assertEquals(true, army.getExercitoDeElfos().containsValue(e2));
     }
     
     @Test
@@ -38,8 +38,8 @@ public class ExercitoDeElfosTest
         
        army.alistarElfo(e1);
        army.alistarElfo(e2);
-       assertEquals(false, army.getExercitoDeElfos().contains(e1));
-       assertEquals(true, army.getExercitoDeElfos().contains(e2));
+       assertEquals(false, army.getExercitoDeElfos().containsValue(e1));
+       assertEquals(true, army.getExercitoDeElfos().containsValue(e2));
     } 
     
     @Test
