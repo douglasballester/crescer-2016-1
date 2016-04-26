@@ -12,11 +12,13 @@ public class EstrategiaTres implements EstrategiaGuerra{
         int contVerde = 0;
         int contNoturno = 0;
         for(Elfo elfo : elfos){
-            if(elfo instanceof ElfoNoturno && elfo.getStatus() == Status.VIVO){
-                contNoturno++;
-            }
-            else if(elfo instanceof ElfoVerde && elfo.getStatus() == Status.VIVO){
-                contVerde++;
+            if(elfo.getStatus() == Status.VIVO){
+                if(elfo instanceof ElfoNoturno){
+                    contNoturno++;
+                }
+                else if(elfo instanceof ElfoVerde){
+                    contVerde++;
+                }
             }
        }
        if(contVerde == contNoturno && !dwarves.isEmpty()){
