@@ -1,0 +1,17 @@
+body{
+  /*background-image: url("digimon_adventure.png");*/
+}
+
+header{
+  position: relative;
+  height: 150px;
+  background-color: yellowgreen;
+}
+
+header > h1 > span:last-child{
+  display: none;
+}
+
+.personagens h2:first-child{
+  display: none;
+}
