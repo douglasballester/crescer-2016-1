@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Dia 04 - jQuery</title>
+    <!--<link rel="stylesheet" href="../lib/1.11.4/themes/smoothness/jquery-ui.css">-->
     <link rel="stylesheet" type="text/css" href="estilo.css">
   </head>
   <body>
@@ -21,11 +22,11 @@
       <input id="txtUrlImagem" type="text" name="urlImagem" placeholder="Ex: bit.ly/shiryu.png"><br>
       <!--<input type="submit" value="Cadastrar!">-->
       <label for="dateDataNascimento">Data Nascimento</label>
-      <input id="dateDataNascimento" type="date" name="dataNascimento" placeholder="dd/MM/yyyy"><br>
+      <input id="dateDataNascimento" type="text" name="dataNascimento" placeholder="dd/MM/yyyy"><br>
       <label for="nbAltura">Altura</label>
-      <input id="altura" type="number" name="altura" placeholder="Ex: 175 cm"><br>
+      <input id="altura" type="text" name="altura" placeholder="Ex: 1.70 m"><br>
       <label for="nbPeso">Peso</label>
-      <input id="peso" type="number" name="peso" placeholder="Ex: 65 kg"><br>
+      <input id="peso" type="text" name="peso" placeholder="Ex: 65 kg"><br>
       <label for="signo">Signo</label>
       <select class="nome-signo" name="nome-signo">
         <option value="selecione">Selecione</option>
@@ -46,16 +47,18 @@
       <input id="localNascimento" type="text" name="localNascimento" placeholder="Ex: Porto Alegre"><br>
       <label for="localTreinamento">Local Treinamento</label>
       <input id="localTreinamento" type="text" name="localTreinamento" placeholder="Ex: Clube da Luta"><br>
-      <button type="autofocus">Adicionar Golpe</button><br>
-      <input id="adiconarGolpe" type="text" name="adicionarGolpe" placeholder="Ex: Meteoro de Pegasus"></input><br>
-      <button type="autofocus">Adicionar Imagem</button><br>
-
+      <button id="adiconar-golpe" type="button" name="btnAdicionarGolpe">Adicionar Golpe</button><br>
+      <ul id="listaGolpe"></ul>
+      <button id="adicionar-Img" type="button" name="btnAdicionarImg">Adicionar Imagem</button><br>
+       <ul id="listaImagem"></ul>
       <button type="submit">Cadastrar!</button>
     </form>
     <hr>
     <div id="detalhes-cavaleiro"></div>
     <ul id="cavaleiros"></ul>
     <script type="text/javascript" src="../lib/jquery-2.2.3.min.js"></script>
+    <!--<script src="../lib/jQuery UI 1.11.4.js"></script>
+    <script src="../lib/jquery-1.10.2.js"></script>-->
     <script type="text/javascript" src="cadastro-cavaleiros.js"></script>
   </body>
 </html>
