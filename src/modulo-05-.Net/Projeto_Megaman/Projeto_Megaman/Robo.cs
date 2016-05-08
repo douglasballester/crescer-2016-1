@@ -39,7 +39,7 @@ namespace Projeto_Megaman
             }
         }
 
-        public virtual void EquiparUpgrade(IUpgrade upgrade)
+        public void EquiparUpgrade(IUpgrade upgrade)
         {
             if (Upgrade.Count < 3)
             {

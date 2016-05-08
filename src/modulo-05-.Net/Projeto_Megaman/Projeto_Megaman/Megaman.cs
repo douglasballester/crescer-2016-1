@@ -10,23 +10,7 @@ namespace Projeto_Megaman
     {
         public Megaman() : base()
         {
-        }
-        private int _ataque = 6;
-        private int _defesa = 0;
-
-        protected override int Ataque
-        {
-            get
-            {
-                return _ataque;
-            }
-        }
-        protected override int Defesa
-        {
-            get
-            {
-                return _defesa;
-            }
+            Ataque = 6;
         }
 
         public override void Atacar(Robo robo)
@@ -39,16 +23,6 @@ namespace Projeto_Megaman
             else
             {
                 robo.ReceberAtaque(this.Ataque);
-            }
-        }
-
-        public override void EquiparUpgrade(IUpgrade upgrade)
-        {
-            if (Upgrade.Count < 3)
-            {
-                Upgrade.Add(upgrade);
-                _ataque += upgrade.UpgradeAtaque;
-                _defesa += upgrade.UpgradeDefesa;
             }
         }
     }
