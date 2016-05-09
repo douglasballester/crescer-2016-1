@@ -94,7 +94,7 @@ namespace Projeto_Megaman_Test
 
             megaman.ToString();
 
-            Assert.AreEqual("Nome: " + "Megaman"+" Vida: " + 100 + ", Ataque: " + 6 + "Defesa: " + 0, megaman.ToString());
+            Assert.AreEqual("Nome: " + "Megaman"+", Vida: " + 100 + ", Ataque: " + 6 + "Defesa: " + 0, megaman.ToString());
         }
 
         [TestMethod]

@@ -77,7 +77,7 @@ namespace Projeto_Megaman_Test
 
             protoman.ToString();
 
-            Assert.AreEqual("Nome: " + "Protoman" + " Vida: " + 100 + ", Ataque: " + 5 + "Defesa: " + 2, protoman.ToString());
+            Assert.AreEqual("Nome: " + "Protoman" + ", Vida: " + 100 + ", Ataque: " + 5 + "Defesa: " + 2, protoman.ToString());
         }
 
         [TestMethod]
@@ -149,6 +149,21 @@ namespace Projeto_Megaman_Test
 
             Assert.AreEqual(20, protoman.Vida);
             Assert.AreEqual(90, bot.Vida);
+        }
+
+        [TestMethod]
+        public void ProtomanAtacaCom1UpgradeAtaqueEDepoisCom3UpDeAtaque()
+        {
+            Robo protoman = new Protoman();
+            Robo bot = new Bot();
+            CanhaoDePlasma upgrade = new CanhaoDePlasma();
+            protoman.EquiparUpgrade(upgrade);
+            protoman.Atacar(bot);
+            protoman.EquiparUpgrade(upgrade);
+            protoman.EquiparUpgrade(upgrade);
+            protoman.Atacar(bot);
+
+            Assert.AreEqual(82, bot.Vida);
         }
     }
 }

@@ -12,12 +12,14 @@ namespace Projeto_Megaman
        
         public int Vida { get; protected set; }
         protected List<IUpgrade> Upgrade = new List<IUpgrade>();
-        
-        protected virtual int Ataque{ get; set;}
+        protected Chip chip;
 
-        protected virtual int Defesa { get; set; }
+        protected virtual int Ataque{ get; set; }
+        protected virtual int Defesa{ get; set; }
 
-        
+        public Robo(Chip chip) : this()
+        {
+        }
 
         public Robo()
         {
@@ -39,7 +41,7 @@ namespace Projeto_Megaman
             }
         }
 
-        public void EquiparUpgrade(IUpgrade upgrade)
+        public virtual void EquiparUpgrade(IUpgrade upgrade)
         {
             if (Upgrade.Count < 3)
             {
@@ -48,6 +50,11 @@ namespace Projeto_Megaman
                 Defesa += upgrade.UpgradeDefesa;
             }
         }
+
+        /*public void VerificaChip(Robo robo)
+        {
+            
+        }*/
 
         public override string ToString()
         {
