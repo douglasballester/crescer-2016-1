@@ -1,0 +1,5 @@
+C:\Users\DOUGLAS\Documents\crescer-2016-1\src\modulo-05-.Net\Projeto_Megaman\Projeto_Megaman\bin\Debug\Projeto_Megaman.dll
+C:\Users\DOUGLAS\Documents\crescer-2016-1\src\modulo-05-.Net\Projeto_Megaman\Projeto_Megaman\bin\Debug\Projeto_Megaman.pdb
+C:\Users\DOUGLAS\Documents\crescer-2016-1\src\modulo-05-.Net\Projeto_Megaman\Projeto_Megaman\obj\Debug\Projeto_Megaman.dll
+C:\Users\DOUGLAS\Documents\crescer-2016-1\src\modulo-05-.Net\Projeto_Megaman\Projeto_Megaman\obj\Debug\Projeto_Megaman.pdb
+C:\Users\DOUGLAS\Documents\crescer-2016-1\src\modulo-05-.Net\Projeto_Megaman\Projeto_Megaman\obj\Debug\Projeto_Megaman.csprojResolveAssemblyReference.cache
