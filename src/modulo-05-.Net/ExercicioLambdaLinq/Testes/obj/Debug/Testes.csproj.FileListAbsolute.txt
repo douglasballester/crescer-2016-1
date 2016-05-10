@@ -1,0 +1,11 @@
+C:\Users\DOUGLAS\Documents\Crescer-2016-Instrutor\src\modulo-05-dotnet\Aula 2\ExercicioLambdaLinq\Testes\obj\Debug\Testes.csprojResolveAssemblyReference.cache
+C:\Users\DOUGLAS\Documents\crescer-2016-1\src\modulo-05-.Net\Aula 2\ExercicioLambdaLinq\Testes\bin\Debug\Testes.dll
+C:\Users\DOUGLAS\Documents\crescer-2016-1\src\modulo-05-.Net\Aula 2\ExercicioLambdaLinq\Testes\bin\Debug\Testes.pdb
+C:\Users\DOUGLAS\Documents\crescer-2016-1\src\modulo-05-.Net\Aula 2\ExercicioLambdaLinq\Testes\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\DOUGLAS\Documents\crescer-2016-1\src\modulo-05-.Net\Aula 2\ExercicioLambdaLinq\Testes\bin\Debug\Newtonsoft.Json.dll
+C:\Users\DOUGLAS\Documents\crescer-2016-1\src\modulo-05-.Net\Aula 2\ExercicioLambdaLinq\Testes\bin\Debug\Repositorio.dll
+C:\Users\DOUGLAS\Documents\crescer-2016-1\src\modulo-05-.Net\Aula 2\ExercicioLambdaLinq\Testes\bin\Debug\Repositorio.pdb
+C:\Users\DOUGLAS\Documents\crescer-2016-1\src\modulo-05-.Net\Aula 2\ExercicioLambdaLinq\Testes\bin\Debug\Newtonsoft.Json.xml
+C:\Users\DOUGLAS\Documents\crescer-2016-1\src\modulo-05-.Net\Aula 2\ExercicioLambdaLinq\Testes\obj\Debug\Testes.csprojResolveAssemblyReference.cache
+C:\Users\DOUGLAS\Documents\crescer-2016-1\src\modulo-05-.Net\Aula 2\ExercicioLambdaLinq\Testes\obj\Debug\Testes.dll
+C:\Users\DOUGLAS\Documents\crescer-2016-1\src\modulo-05-.Net\Aula 2\ExercicioLambdaLinq\Testes\obj\Debug\Testes.pdb

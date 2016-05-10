@@ -1,0 +1,9 @@
+C:\Users\DOUGLAS\Documents\Crescer-2016-Instrutor\src\modulo-05-dotnet\Aula 2\ExercicioLambdaLinq\RepositorioFuncionarios\obj\Debug\Repositorio.csprojResolveAssemblyReference.cache
+C:\Users\DOUGLAS\Documents\crescer-2016-1\src\modulo-05-.Net\Aula 2\ExercicioLambdaLinq\RepositorioFuncionarios\obj\Debug\Repositorio.csprojResolveAssemblyReference.cache
+C:\Users\DOUGLAS\Documents\crescer-2016-1\src\modulo-05-.Net\Aula 2\ExercicioLambdaLinq\RepositorioFuncionarios\bin\Debug\Repositorio.dll
+C:\Users\DOUGLAS\Documents\crescer-2016-1\src\modulo-05-.Net\Aula 2\ExercicioLambdaLinq\RepositorioFuncionarios\bin\Debug\Repositorio.pdb
+C:\Users\DOUGLAS\Documents\crescer-2016-1\src\modulo-05-.Net\Aula 2\ExercicioLambdaLinq\RepositorioFuncionarios\obj\Debug\Repositorio.dll
+C:\Users\DOUGLAS\Documents\crescer-2016-1\src\modulo-05-.Net\Aula 2\ExercicioLambdaLinq\RepositorioFuncionarios\obj\Debug\Repositorio.pdb
+C:\Users\DOUGLAS\Documents\crescer-2016-1\src\modulo-05-.Net\ExercicioLambdaLinq\RepositorioFuncionarios\obj\Debug\Repositorio.csprojResolveAssemblyReference.cache
+C:\Users\DOUGLAS\Documents\crescer-2016-1\src\modulo-05-.Net\ExercicioLambdaLinq\RepositorioFuncionarios\obj\Debug\Repositorio.dll
+C:\Users\DOUGLAS\Documents\crescer-2016-1\src\modulo-05-.Net\ExercicioLambdaLinq\RepositorioFuncionarios\obj\Debug\Repositorio.pdb
