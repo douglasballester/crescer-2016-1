@@ -3,15 +3,13 @@
     Layout = null;
 }
 
-@{string x = ViewBag.nome + ".css";}
-
 <!DOCTYPE html>
 
 <html>
 <head>
     <meta charset="UTF-8">
     <title>Desafio Zen Garden</title>
-    <link href="~/Content/Estilos/@x" rel="stylesheet" />
+    <link href="@String.Format("/Content/Estilos/{0}.css",@ViewBag.nome)" rel="stylesheet" />
 </head>
 
 <body>

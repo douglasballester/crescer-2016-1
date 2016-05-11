@@ -7,7 +7,11 @@ namespace MVC.Controllers
         public ActionResult Index(string nome)
         {
             ViewBag.nome = nome;
-            return View();
+            if (nome == null)
+            {
+               ViewBag.nome = "douglas";
+            }
+            return View();   
         }
     }
 }
