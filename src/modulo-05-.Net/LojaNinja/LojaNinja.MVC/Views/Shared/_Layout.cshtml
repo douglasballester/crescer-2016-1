@@ -1,0 +1,36 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/Custom/principal.css" rel="stylesheet" />
+</head>
+<body>
+<<<<<<< HEAD
+    <h1 class="site-title">Loja Ninja</h1>
+    <div class="container"> 
+=======
+    <nav class="navbar navbar-default navbar-static-top">
+        <ul class="nav navbar-nav">
+            <li> <a href="/Pedido">Home</a></li>
+            <li> <a href="/Pedido/Cadastro">Cadastrar</a></li>
+            <li> <a href="/Pedido/Lista">Listar</a></li>
+        </ul>
+    </nav>
+    <div class="form-horizontal"> 
+>>>>>>> 9c6a820787619075ecea444f4b8f1a38855fdfb0
+        @RenderBody()
+    </div>
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script> 
+    @RenderSection("scripts", false)   
+</body>
+</html>

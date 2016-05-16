@@ -1,0 +1,135 @@
+﻿@model IEnumerable<LojaNinja.Dominio.Pedido>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<p>
+<<<<<<< HEAD
+    <a href="~/Pedido/Manter" class="btn btn-primary">Cadastrar novo Pedido</a>    
+=======
+    @Html.ActionLink("Create New", "Cadastro")
+>>>>>>> 9c6a820787619075ecea444f4b8f1a38855fdfb0
+</p>
+<table class="table table-bordered table-striped">
+    <tr>
+        <th>
+<<<<<<< HEAD
+            Data do Pedido
+        </th>
+        <th>
+            Data Entrega Des.
+        </th>
+        <th>
+            Produto
+        </th>
+        <th>
+            Valor
+        </th>
+        <th>
+            Cliente
+        </th>
+        <th>
+            Cidade
+        </th>
+        <th>
+            Estado
+        </th>
+        <th>
+            Pedido Urgente?
+=======
+            @Html.DisplayNameFor(model => model.DataPedido)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataDesejoEntregaDesejada)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NomeProduto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ValorVenda)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NomeCliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cidade)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Estado)
+>>>>>>> 9c6a820787619075ecea444f4b8f1a38855fdfb0
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+<<<<<<< HEAD
+                @item.DataPedido.ToShortDateString()
+            </td>
+            <td>
+                @item.DataEntregaDesejada.ToShortDateString()
+            </td>
+            <td>
+                @item.NomeProduto
+            </td>
+            <td>
+                R$@item.Valor.ToString("0.00")
+            </td>
+            <td>
+                @item.NomeCliente
+            </td>
+            <td>
+                @item.Cidade
+            </td>
+            <td>
+                @item.Estado
+            </td>
+            <td>
+                @{ if (item.PedidoUrgente)
+                    {
+                        <span class="glyphicon glyphicon-thumbs-up"></span>
+                    }
+                    else
+                    {
+                        <span class="glyphicon glyphicon-thumbs-down"></span>
+                   }
+                 }
+            </td>
+            <td>
+                <a class="btn btn-default btn-sm" href="~/Pedido/Manter/@item.Id"><span class="glyphicon glyphicon-pencil">Editar</span></a>
+                <a class="btn btn-info btn-sm" href="~/Pedido/Detalhes/@item.Id"><span class="glyphicon glyphicon-menu-hamburger">Detalhes</span></a>
+                <a class="btn btn-danger btn-sm" href="~/Pedido/Excluir/@item.Id"><span class="glyphicon glyphicon-remove">Excluir</span></a>      
+                         
+=======
+                @Html.DisplayFor(modelItem => item.DataPedido)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataDesejoEntregaDesejada)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeProduto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ValorVenda)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cidade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Estado)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Editar", new { id = item.Id }) |
+                @Html.ActionLink("Ver Detalhes", "Detalhes", new { id = item.Id }) |
+                @Html.ActionLink("Remover", "Deletar", new { id = item.Id })
+>>>>>>> 9c6a820787619075ecea444f4b8f1a38855fdfb0
+            </td>
+        </tr>
+    }
+</table>
