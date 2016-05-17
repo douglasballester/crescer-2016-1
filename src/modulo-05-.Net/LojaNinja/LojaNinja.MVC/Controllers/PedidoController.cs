@@ -48,12 +48,17 @@ namespace LojaNinja.MVC.Controllers
                 {
                     var pedido = new Pedido(model.DataEntrega, model.NomeProduto, model.Valor, model.TipoPagamento, model.NomeCliente, model.Cidade, model.Estado);
 
-                    if (model.Id.HasValue)
+                    if (model.Id > 0)
+                    {
                         repositorio.AtualizarPedido(pedido);
+                        ViewBag.MensagemSucesso = "Pedido alterado com sucesso!";
+                    }
                     else
+                    {
                         repositorio.IncluirPedido(pedido);
+                        ViewBag.MensagemSucesso = "Pedido salvo com sucesso!";
+                    }
 
-                    ViewBag.MensagemSucesso = "Pedido salvo com sucesso!";
                     return View("Detalhes", pedido);
                 }
                 catch (ArgumentException ex)

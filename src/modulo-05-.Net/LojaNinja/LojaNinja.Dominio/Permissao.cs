@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace LojaNinja.Dominio
 {
-    public class Usuario
+    public class Permissao
     {
-        public int id { get; set; }
-        public string Email { get; set; }
-        public string Senha { get; set; }
+        public Permissao() { }
+
+        public int Id { get; set; }
 
         public string Nome { get; set; }
 
-        public List<Permissao> Permissoes { get; set; }
+        public List<Usuario> Usuarios { get; set; }
     }
 }

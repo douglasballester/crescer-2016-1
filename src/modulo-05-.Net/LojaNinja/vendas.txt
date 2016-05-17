@@ -1,9 +1,4 @@
 Número Pedido;Data Pedido;Data Desejo Entrega;Nome Produto;Valor Venda;Tipo Pagamento;Nome Cliente;Cidade;Estado;Urgente
-2;01/02/2009 04:53;01/02/2009 04:53;Kunai;1200;Visa;Betina;Parkville                   ;MO;True
-3;01/02/2009 13:08;01/02/2009 13:08;Shuriken;1200;Mastercard;Federica e Andrea;Astoria                     ;OR;True
-4;01/03/2009 14:44;01/03/2009 14:44;Kunai;1200;Visa;Gouya;Echuca;Victoria;True
-5;01/04/2009 20:11;01/04/2009 20:11;Shuriken;1200;Mastercard;Fleur;Peoria                      ;IL;True
-6;01/02/2009 20:09;01/02/2009 20:09;Shuriken;1200;Mastercard;adam;Martin                      ;TN;True
 7;01/04/2009 13:17;01/04/2009 13:17;Faca de Gaudério;1200;Mastercard;Nunes;São Leopoldo;Rio Grande do Sul;True
 8;01/04/2009 14:11;01/04/2009 14:11;Katana;1200;Visa;Aidan;Chatou;Ile-de-France;True
 9;01/05/2009 02:42;01/05/2009 02:42;Kunai;1200;Diners;Stacy;New York                    ;NY;True
@@ -995,3 +990,4 @@ Número Pedido;Data Pedido;Data Desejo Entrega;Nome Produto;Valor Venda;Tipo Pag
 995;01/06/2009 12:56;01/06/2009 12:56;Shuriken;1200;Diners;Karen;Roquefort;Provence-Alpes-Cote d'Azur;True
 996;01/01/2009 11:05;01/01/2009 11:05;Kunai;1200;Visa;Rima;Mullingar;Westmeath;True
 997;01/05/2009 04:10;01/05/2009 04:10;Shuriken;1200;Visa;Dania;Munich;Bayern;True
+998;17/05/2016 13:53;19/12/2016 00:00;AGUA;12,12;Visa;GUSTAVO;CANOAS;RS;False
