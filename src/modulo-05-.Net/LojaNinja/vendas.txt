@@ -1,10 +1,7 @@
 Número Pedido;Data Pedido;Data Desejo Entrega;Nome Produto;Valor Venda;Tipo Pagamento;Nome Cliente;Cidade;Estado;Urgente
 7;01/04/2009 13:17;01/04/2009 13:17;Faca de Gaudério;1200;Mastercard;Nunes;São Leopoldo;Rio Grande do Sul;True
-8;01/04/2009 14:11;01/04/2009 14:11;Katana;1200;Visa;Aidan;Chatou;Ile-de-France;True
-9;01/05/2009 02:42;01/05/2009 02:42;Kunai;1200;Diners;Stacy;New York                    ;NY;True
-10;01/02/2009 09:16;01/02/2009 09:16;Kunai;1200;Mastercard;Sean ;Shavano Park                ;TX;True
-11;01/02/2009 14:18;01/02/2009 14:18;Shuriken;1200;Visa;Richard;Riverside                   ;NJ;True
-12;01/04/2009 01:05;01/04/2009 01:05;Kunai;1200;Diners;Leanne;Julianstown;Meath;True
+11;01/02/2009 14:18;10/10/2016 00:00;ESPADA;50000;Visa;alycio;Riverside                   ;RV;False
+12;01/04/2009 01:05;25/12/2016 00:00;FACAO;800;Visa;Joao;Mariana;DT;False
 13;01/05/2009 11:37;01/05/2009 11:37;Shuriken;1200;Visa;Janet;Ottawa;Ontario;True
 14;01/02/2009 07:35;01/02/2009 07:35;Shuriken;1200;Diners;Hani;Salt Lake City              ;UT;True
 15;01/06/2009 12:56;01/06/2009 12:56;Katana;1200;Visa;Jeremy;Manchester;England;True

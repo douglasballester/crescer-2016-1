@@ -18,6 +18,7 @@ namespace LojaNinja.MVC.Controllers
             if (id.HasValue)
             {
                 var pedido = repositorio.ObterPedidoPorId(id.Value);
+                TempData["DataPedido"] = pedido.DataPedido;
 
                 var model = new PedidoModel()
                 {
@@ -46,7 +47,8 @@ namespace LojaNinja.MVC.Controllers
             {
                 try
                 {
-                    var pedido = new Pedido(model.DataEntrega, model.NomeProduto, model.Valor, model.TipoPagamento, model.NomeCliente, model.Cidade, model.Estado);
+                    var dataPedido = (DateTime)TempData["DataPedido"];
+                    var pedido = new Pedido((int)model.Id, dataPedido, model.DataEntrega, model.NomeProduto, model.Valor, model.TipoPagamento, model.NomeCliente, model.Cidade, model.Estado, model.urgente);
 
                     if (model.Id > 0)
                     {

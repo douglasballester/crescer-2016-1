@@ -10,7 +10,7 @@ namespace LojaNinja.Repositorio
 {
     public class RepositorioVendas
     {
-        private const string PATH_ARQUIVO = @"C:\Users\douglas.ballester\Documents\crescer-2016-1\src\modulo-05-.Net\LojaNinja\Vendas.txt";
+        private const string PATH_ARQUIVO = @"C:\Users\DOUGLAS\Documents\crescer-2016-1\src\modulo-05-.Net\LojaNinja\Vendas.txt";
         private static readonly object objetoLock = new object();
 
         public List<Pedido> ObterPedidos()
@@ -54,14 +54,14 @@ namespace LojaNinja.Repositorio
                                 pedido.PedidoUrgente);
         }
 
-        //TODO Verificar por que não altera o pedido
+      
         public void AtualizarPedido(Pedido pedido)
         {
             var listaPedidos = ObterPedidos();
-            var pedidoAtualizado = listaPedidos.FirstOrDefault(ped => ped.Id.Equals(pedido.Id));
+            var pedidoAtualizado = listaPedidos.FindIndex(p => p.Id.Equals(pedido.Id));
 
-            listaPedidos.Remove(listaPedidos.FirstOrDefault(ped => ped.Id.Equals(pedido.Id)));
-            listaPedidos.Add(pedidoAtualizado);
+            listaPedidos[pedidoAtualizado] = pedido;
+
             PreencherArquivoCSV(listaPedidos);
         }
 

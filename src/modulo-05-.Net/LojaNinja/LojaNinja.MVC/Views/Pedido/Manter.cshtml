@@ -8,15 +8,8 @@
 
 @using (Html.BeginForm("Salvar", "Pedido", FormMethod.Post))
 {
-    try
-    {
-        @Html.Hidden("Id", Model.Id)
-    }
-    catch
-    {
-        @Html.Hidden("id", 0)
-    }
-
+       @Html.HiddenFor(model => model.Id)
+    
     <div class="form-horizontal">
         <h4>Cadastro de Pedido</h4>
         <hr />

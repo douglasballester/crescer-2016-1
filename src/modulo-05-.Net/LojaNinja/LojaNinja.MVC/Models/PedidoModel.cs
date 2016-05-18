@@ -10,6 +10,8 @@ namespace LojaNinja.MVC.Models
 {
     public class PedidoModel
     {
+        public bool urgente { get; set; }
+
         public int? Id { get; set; }
 
         [Display(Name = "Data de entrega ")]
@@ -41,5 +43,8 @@ namespace LojaNinja.MVC.Models
         [StringLength(2, ErrorMessage = "Estado deverá ter 2 caracteres")]
         [Required(ErrorMessage = "Informe o estado.")]
         public string Estado { get; set; }
+
+
+        public DateTime DataPedido { get; set; }
     }
 }
