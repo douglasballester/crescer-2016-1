@@ -196,7 +196,7 @@ setInterval(function () {
         }
         });
 }
-    , 4000);
+    , 5000);
 
 function verificaPluralESingular(qtd) {
     if (qtd === 1) {
