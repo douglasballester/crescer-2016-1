@@ -1,4 +1,11 @@
-﻿<div id="toastErro" class="feedback-toast span12" style="display: none;">
+﻿@model CdZ.MVC.Models.Cavaleiro.CavaleiroViewModel
+
+@{ 
+    ViewBag.Title = "Cadastrar Cavaleiro";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="toastErro" class="feedback-toast span12" style="display: none;">
     <div class="alert alert-error">
         <a class="close">x</a>
         <strong class="title">Ops!</strong>
@@ -66,6 +73,7 @@
     <button type="submit" class="btn btn-primary">Cadastrar!</button>
 </form>
 <button id="btnMostrarForm" type="button">Mostrar Formulario</button>
+<button id="btnFecharForm" type="button">Fechar</button>
 <hr>
 <button id="btnCriar">Criar fake!</button>
 <div id="detalhes-cavaleiro"></div>

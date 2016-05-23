@@ -34,9 +34,6 @@ CavaleiroIndexView.prototype.render = function () {
             }
         );
 
-
-
-
     // 2 - Registra evento de clique para inserção do cavaleiro fake
     // TODO - remover quando colocar o bind dos campos do formulário
     $('#btnCriar').click(function () {
@@ -98,29 +95,9 @@ CavaleiroIndexView.prototype.editarCavaleiroNoServidor = function(e) {
         });
 };
 
-// TODO: remover cavaleiro hard-coded quando fizer bind do formulário.
-var cavaleiroHardCoded = {
-    Nome: 'Xiru ' + new Date().getTime(),
-    AlturaCm: 187,
-    Signo: 7,
-    TipoSanguineo: 1,
-    // Estamos enviando a data UTC (sem timezone) para que seja corretamente armazenada e posteriormente exibida de acordo com o fuso-horário da aplicação cliente que consumir os dados
-    DataNascimento: new Date(Date.UTC(2001, 1, 15)).toISOString(),
-    Golpes: [{ Nome: 'Cólera do Dragão' }, { Nome: 'Cólera dos 100 dragões' }],
-    LocalNascimento: {
-        Texto: 'Beijing'
-    },
-    LocalTreinamento: {
-        Texto: '5 picos de rosan'
-    },
-    Imagens: [{
-        Url: 'http://images.uncyc.org/pt/3/37/Shiryumestrepokemon.jpg',
-        IsThumb: true
-    }, {
-        Url: 'http://images.uncyc.org/pt/thumb/5/52/Shyryugyarados.jpg/160px-Shyryugyarados.jpg',
-        IsThumb: false
-    }]
-};
+
+
+
 
 // TODO: Implementar atualização a partir de um formulário ou campos na tela, e não hard-coded
 function simularAtualizacaoHardCoded() {
@@ -151,12 +128,13 @@ function simularAtualizacaoHardCoded() {
 
 $('#btnMostrarForm').click(function () { $('#frmNovoCavaleiro').show(); })
 
+$('#btnFecharForm').click(function () { $('#frmNovoCavaleiro').hide(); })
+
 $('#btnAdicionarGolpe').click(function () {
     $('#novosGolpes').append(gerarElementoLiComInputTexto());
 });
 
 var $novasImagens = $('#novasImagens');
-
 $('#btnAdicionarImg').click(function () {
     var $novoLi = gerarElementoLiComInputs();
     $novasImagens.append($novoLi);
@@ -219,7 +197,8 @@ function exibeNotificationNovosCavaleiros(qtd) {
     Notification.requestPermission().then(function (result) {
         console.log(result);
         if (result === 'granted') { 
-            verificaPluraESingular(qtd);
+            verificaPluralESingular(qtd);
         }
     });
 }
+
