@@ -1,0 +1,12 @@
+#lista-albuns{
+      margin: 0 auto;
+      font-family: comic sans-serif;
+      font-size: 20px;
+      color: blue;
+}
+
+li{
+      list-style: none;
+      display: inline;
+      padding: 10px;
+}
