@@ -1,0 +1,1 @@
+insert into PESSOA(ID_PESSOA, NM_PESSOA) VALUES(1, 'TESTE')
