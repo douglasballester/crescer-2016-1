@@ -31,11 +31,13 @@ public class PedidoItem implements Serializable {
     @Column(name = "ID_PEDIDOITEM")
     private Long idPedidoItem;
     
-    @OneToOne
+    @Basic(optional = false)
+    @ManyToOne
     @JoinColumn(name="IDPEDIDO")
     private Pedido pedido;
     
-    @OneToOne
+    @Basic(optional = false)
+    @ManyToOne
     @JoinColumn(name="IDPRODUTO")
     private Produto produto;
    
