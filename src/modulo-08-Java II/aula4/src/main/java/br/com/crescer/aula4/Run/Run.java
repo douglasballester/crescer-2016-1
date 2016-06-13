@@ -15,12 +15,12 @@ public class Run {
     
     public static void main(String[] args) {
         
-        Query query = em.createQuery("SELECT p FROM Pessoa p");
+        /*Query query = em.createQuery("SELECT p FROM Pessoa p");
         List<Pessoa> pessoas = query.getResultList();
         
         
         
         em.close();
-        emf.close();
+        emf.close();*/
     }
 }

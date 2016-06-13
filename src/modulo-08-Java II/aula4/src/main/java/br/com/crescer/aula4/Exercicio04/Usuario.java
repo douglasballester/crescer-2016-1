@@ -20,6 +20,7 @@ public class Usuario implements Serializable {
     @Id // Identifica a PK
     @GeneratedValue(strategy = SEQUENCE, generator = "SEQ_USUARIO")
     @SequenceGenerator(name = "SEQ_USUARIO",  sequenceName = "SEQ_USUARIO", allocationSize = 1)
+    
     @Basic(optional = false)
     @Column(name = "ID_USUARIO")
     private Long idUsuario;
@@ -43,15 +44,7 @@ public class Usuario implements Serializable {
     public void setAmigos(List<Amigo> amigos) {
         this.amigos = amigos;
     }
-
-    public List<Publicacao> getPublicacoes() {
-        return publicacoes;
-    }
-
-    public void setPublicacoes(List<Publicacao> publicacoes) {
-        this.publicacoes = publicacoes;
-    }
-
+    
     public void setIdUsuario(Long idUsuario) {
         this.idUsuario = idUsuario;
     }
@@ -62,9 +55,4 @@ public class Usuario implements Serializable {
     
     @OneToMany(mappedBy="usuario")
     private List<Amigo> amigos;
-    
-    @OneToMany(mappedBy="usuario")
-    private List<Publicacao> publicacoes;
-    
-    
 }

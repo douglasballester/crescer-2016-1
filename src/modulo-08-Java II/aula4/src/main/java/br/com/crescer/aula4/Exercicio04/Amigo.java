@@ -12,6 +12,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 @Entity
 @Table(name= "Amigo")
@@ -20,11 +22,13 @@ public class Amigo implements Serializable {
     @Id // Identifica a PK
     @GeneratedValue(strategy = SEQUENCE, generator = "SEQ_AMIGO")
     @SequenceGenerator(name = "SEQ_AMIGO",  sequenceName = "SEQ_AMIGO", allocationSize = 1)
+    
     @Basic(optional = false)
     @Column(name = "ID_AMIGO")
     private Long idAmigo;
 
     @Basic(optional = false)
+    @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "DATA_AMIZADE")
     private Date dataAmizade;
 
