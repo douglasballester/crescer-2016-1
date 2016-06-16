@@ -5,7 +5,7 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 
 
-@ManagedBean()
+@ManagedBean
 @ViewScoped
 public class Hello implements Serializable {
     
