@@ -9,9 +9,8 @@ import java.util.stream.Stream;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-/**
- * @author Carlos H. Nonnemacher
- */
+
+
 @Service
 public class PessoaService {
 

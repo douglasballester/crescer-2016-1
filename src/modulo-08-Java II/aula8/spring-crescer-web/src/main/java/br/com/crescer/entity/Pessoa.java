@@ -12,10 +12,9 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import org.springframework.format.annotation.DateTimeFormat;
 
-/**
- * @author Carlos H. Nonnemacher
- */
+
 @Entity
 @Table(name = "PESSOA")
 public class Pessoa implements Serializable {
@@ -31,7 +30,8 @@ public class Pessoa implements Serializable {
     @Basic(optional = false)
     @Column(name = "NM_PESSOA")
     private String nome;
-    
+
+    @DateTimeFormat(pattern = "yyyy-MM-dd")    
     @Temporal(value = TemporalType.DATE)
     @Basic(optional = false)
     @Column(name = "DT_NASCIMENTO_PESSOA")

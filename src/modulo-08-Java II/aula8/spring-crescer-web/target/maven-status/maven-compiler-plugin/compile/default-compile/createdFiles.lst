@@ -2,6 +2,7 @@ br\com\crescer\entity\Pessoa.class
 br\com\crescer\controllers\PessoaRest.class
 br\com\crescer\AppRun.class
 br\com\crescer\controllers\PessoaController.class
+br\com\crescer\entity\Pessoa_.class
 br\com\crescer\controllers\PaginaInicialController.class
 br\com\crescer\services\PessoaService.class
 br\com\crescer\repository\PessoaRepository.class

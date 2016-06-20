@@ -11,9 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-/**
- * @author Carlos H. Nonnemacher
- */
+
 @Controller
 @RequestMapping("/pessoa")
 public class PessoaController {
@@ -28,7 +26,7 @@ public class PessoaController {
         }
         model.addAttribute("pessoa", new Pessoa());
         model.addAttribute("pessoas", service.findAll());
-        return "index";
+        return "CadastroPessoa";
     }
     
     @RequestMapping(method = RequestMethod.POST)
